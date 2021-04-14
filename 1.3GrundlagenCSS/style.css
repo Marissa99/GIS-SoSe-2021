@@ -5,15 +5,14 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("Bilder/Hintergrund.png"); 
 }
+
 .ErsteNAV{
-    position: fixed;
-    float: right;
+    position: sticky;
     top: 0;
-    right: 0;
+    float: right;
+    height: 2em;
     background-color: deeppink;
-    border-radius: 20px;
-    padding: 10px 10px 10px 10px;
-    margin-left: 800px;
+    border-radius: 5px;
 }
 
 .Navi:hover{
