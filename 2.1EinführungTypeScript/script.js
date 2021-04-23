@@ -78,14 +78,19 @@ Gemeinsam: haben an sich keinen Rückgabewert (void) außer man möchte etwas zu
 let zahl1 = 5;
 let zahl2 = 4;
 let i = 1;
+let j = 1900;
 multiply(zahl1, zahl2);
 max(zahl1, zahl2);
 schleife();
 getRandom();
+factorial(zahl1);
+leapyears(j);
+/*a)*/
 function multiply(a, b) {
     let ergebnis = a * b;
     console.log(ergebnis);
 }
+/*b)*/
 function max(a, b) {
     if (a < b) {
         console.log(b);
@@ -94,6 +99,7 @@ function max(a, b) {
         console.log(a);
     }
 }
+/*c)*/
 function schleife() {
     let sum = 0;
     i = 1;
@@ -103,6 +109,7 @@ function schleife() {
     } while (i <= 100);
     console.log(sum);
 }
+/*d)*/
 function getRandom() {
     for (let i = 0; i < 10; i++) {
         let min = 0;
@@ -110,5 +117,100 @@ function getRandom() {
         let zufall = (Math.random() * (max - min)) + min;
         console.log(zufall);
     }
+}
+/*e)*/
+function factorial(n) {
+    let facult = n;
+    if (n > 1) {
+        do {
+            facult = facult * (n - 1);
+            n = n - 1;
+        } while (n > 1);
+    }
+    else {
+        facult = 1;
+    }
+    console.log(facult);
+}
+/*f)*/
+function leapyears(jahr) {
+    for (jahr; jahr < 2022; jahr++) {
+        if (jahr % 4 == 0 && jahr % 100 !== 0 || jahr % 400 == 0) {
+            console.log(jahr);
+        }
+    }
+}
+//Aufgabe 6:
+//a)
+console.log("6.a)");
+symbol();
+function symbol() {
+    let hashtag = "#";
+    for (let i = 0; i < 7; i++) {
+        console.log(hashtag);
+        hashtag = hashtag + "#";
+    }
+}
+//b)
+console.log("6.b)");
+hochzaelen();
+function hochzaelen() {
+    let zahl = 1;
+    for (zahl; zahl <= 100; zahl++) {
+        if (zahl % 3 == 0) {
+            console.log("Fizz");
+        }
+        else {
+            if (zahl % 5 == 0) {
+                console.log("Buzz");
+            }
+            else {
+                console.log(zahl);
+            }
+        }
+    }
+}
+//c) //funktioniert noch nicht!
+console.log("6.c)");
+spiel();
+function spiel() {
+    let zahl = 1;
+    for (zahl; zahl <= 100; zahl++) {
+        if (zahl % 3 == 0) {
+            console.log("Fizz");
+        }
+        else {
+            if (zahl % 5 == 0) {
+                console.log("Buzz");
+            }
+            else {
+                if (zahl % 3 == 0 && zahl % 5 == 0)
+                    console.log("FizzBuzz");
+                else {
+                    console.log(zahl);
+                }
+            }
+        }
+    }
+}
+//d) 
+console.log("6.d)");
+schach();
+function schach() {
+    let brett = "";
+    let zeilen = 1;
+    let position = 1;
+    for (zeilen; zeilen < 9; zeilen++) {
+        for (position; position < 9; position++) {
+            if (zeilen % 2 !== 0 && position % 2 !== 0 || zeilen % 2 == 0 && position % 2 == 0) {
+                brett = brett + " ";
+            }
+            else {
+                brett = brett + "#";
+            }
+        }
+        brett = brett + "\n";
+    }
+    console.log(brett);
 }
 //# sourceMappingURL=script.js.map
