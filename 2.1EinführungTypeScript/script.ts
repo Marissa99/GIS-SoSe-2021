@@ -1,9 +1,11 @@
 
-/*Aufgabe 1:*/
+//Aufgabe 1:
+console.log("Aufgabe 1.");
 function a1(): void {
     let x: string = "Alles";
     console.log(x);
     func2();
+    console.log(x);
     func1();
     console.log(x);
     console.log("Logo!"); 
@@ -30,7 +32,8 @@ c) Einfügen weiterer Funktionen: func2
 */ 
 
 
-/* Aufgabe 2:*/
+// Aufgabe 2:
+console.log("Aufgabe 2.");
 function a2(): void {
     let i: number = 9;
 
@@ -46,17 +49,17 @@ a2();
 Variable i wird auf 9 gesetzt. 
 Die Schleife do wird ausgeführt, und zählt von 9 rückwärts solange es größer 0 ist.
 Variable i wird kurzzeitig immer auf den neuen Wert gesetzt. 
-
 */
 
-/* Aufgabe 3:*/
-/*
+/*Aufgabe 3:
+
 -Variablen in Funktionen falsch benannt bzw. gedopplelt
 -Falsche Variablen in Funktionen aufrufen
 -Zeichen vergessen (, ; () {}*/
 
 
-/* Aufgabe 4: func1,2,3 wurden durch 3,4,5 ersetzt da es sonst Überschneidungen gibt.*/
+// Aufgabe 4: func1,2,3 wurden durch 3,4,5 ersetzt da es sonst Überschneidungen gibt.
+console.log("Aufgabe 4.");
 let x: string = "Hallo";
 console.log(x);
 func3(x);
@@ -91,27 +94,24 @@ Gemeinsam: haben an sich keinen Rückgabewert (void) außer man möchte etwas zu
 */
 
 
-/*Aufgabe 5:*/
+//Aufgabe 5:
 
 let zahl1: number = 5;
 let zahl2: number = 4;
 let i: number = 1;
 let j: number = 1900;
+
+//a)
+console.log("Aufgabe 5.a)");
 multiply(zahl1, zahl2);
-max (zahl1, zahl2);
-schleife();
-getRandom();
-factorial(zahl1);
-leapyears(j);
-
-
-/*a)*/
 function multiply(a: number, b: number): void {
     let ergebnis: number = a * b;
     console.log (ergebnis);
 }
 
-/*b)*/
+//b)
+console.log("Aufgabe 5.b)");
+max (zahl1, zahl2);
 function max(a: number, b: number): void {
     if (a < b) {
         console.log (b);
@@ -121,7 +121,9 @@ function max(a: number, b: number): void {
     } 
 }
 
-/*c)*/
+//c)
+console.log("Aufgabe 5.c)");
+schleife();
 function schleife (): void {
 let sum: number = 0; i = 1;
 do {sum = sum + i;
@@ -131,19 +133,23 @@ while (i <= 100);
 console.log (sum);
 }
 
-/*d)*/
+//d)
+console.log("Aufgabe 5.d)");
+getRandom();
 function getRandom(): void {
     
     for (let i: number = 0; i < 10; i++) {
     let min: number = 0;
     let max: number = 100;
-    let zufall: number = (Math.random() * (max - min)) + min;
+    let zufall: number = Math.floor(Math.random() * (max - min) + min);
 
     console.log(zufall);
     }
 }
 
-/*e)*/
+//e)
+console.log("Aufgabe 5.e)");
+factorial(zahl1);
 function factorial(n: number): void { 
     let facult: number = n;
     if (n > 1) {
@@ -157,8 +163,9 @@ function factorial(n: number): void {
     console.log(facult);
 }
 
-/*f)*/
-
+//f)
+console.log("Aufgabe 5.f)");
+leapyears(j);
 function leapyears(jahr: number): void {
     for (jahr; jahr < 2022; jahr++) {
         if (jahr % 4 == 0 && jahr % 100 !== 0  || jahr % 400 == 0 ) {
@@ -169,9 +176,8 @@ function leapyears(jahr: number): void {
 
 
 //Aufgabe 6:
-
 //a)
-console.log("6.a)");
+console.log("Aufgabe 6.a)");
 symbol();
 
 function symbol(): void {
@@ -183,7 +189,7 @@ function symbol(): void {
 }
 
 //b)
-console.log("6.b)");
+console.log("Aufgabe 6.b)");
 hochzaelen();
 
 function hochzaelen(): void {
@@ -203,42 +209,58 @@ function hochzaelen(): void {
     }
 }
 
-//c) //funktioniert noch nicht!
-console.log("6.c)");
+//c) 
+console.log("Aufgabe 6.c)");
 spiel();
 
 function spiel (): void {
-    let zahl: number = 1;
-    for (zahl; zahl <= 100; zahl++) {
-        if (zahl % 3 == 0) {
+
+    for (let zahl: number = 1; zahl <= 100; zahl++) {
+        if (zahl % 3 == 0 && zahl % 5 == 0) { //muss zuerst geprüft werden, bevor er die einzelnen prüft
+            console.log ("FizzBuzz");
+        }  
+        else if (zahl % 3 == 0) {
             console.log ("Fizz");
         }
-        else {  
-            if (zahl % 5 == 0) {
-                console.log ("Buzz");
-            }
-            else {
-                if (zahl % 3 == 0 && zahl % 5 == 0)
-                console.log ("FizzBuzz");
-            
-                    else {
-                    console.log (zahl);
-                } 
-            }
+        else if (zahl % 5 == 0) {
+            console.log ("Buzz");
         }
+        else {
+        console.log (zahl);
+        } 
     }
 }
 
+
+
 //d) 
-console.log("6.d)");
-schach ();
+console.log("Aufgabe 6.d)");
+schach();
 
 function schach(): void {
     let brett: string = "";
-    let zeilen: number = 1;
-    let position: number = 1;
-    for (zeilen; zeilen < 9; zeilen++) {
-        for (position; position < 9; position++) {
+    for (let zeilen: number = 1; zeilen < 9; zeilen++) {
+        for (let position: number = 1; position < 9; position++) {
+            if (zeilen % 2 !== 0 && position % 2 !== 0 || zeilen % 2 == 0 && position % 2 == 0) {
+                brett = brett + " ";
+            }
+            else {
+                brett = brett + "#";
+            }
+        }
+        brett = brett + "\n"; 
+    }    
+    console.log(brett);
+}
+//e) 
+console.log("Aufgabe 6.e)");
+let groesse: number = 5;
+schachbrett(groesse);
+
+function schachbrett(gr: number): void {
+    let brett: string = "";
+    for (let zeilen: number = 1; zeilen < gr + 1; zeilen++) {
+        for (let position: number = 1; position < gr + 1 ; position++) {
             if (zeilen % 2 !== 0 && position % 2 !== 0 || zeilen % 2 == 0 && position % 2 == 0) {
                 brett = brett + " ";
             }
