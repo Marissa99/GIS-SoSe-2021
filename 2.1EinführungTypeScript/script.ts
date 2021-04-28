@@ -91,6 +91,8 @@ lokale = Variablen welche nur innerhalb der Klammern {} bzw. hier innerhalb der 
 
 Unterschied: Variablen speichern Typ und Wert, hingegen können Funktionen mit ihnen arbeiten.
 Gemeinsam: haben an sich keinen Rückgabewert (void) außer man möchte etwas zurück bekommen
+VERBESSERUNG Gemeinsam: "Sowohl Variablen als auch Funktionen haben eine Typbezeichnung. 
+Bei der Funktion beschreibt diese den Typ des Rückgabewerts."
 */
 
 
