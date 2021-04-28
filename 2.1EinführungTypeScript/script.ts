@@ -106,10 +106,13 @@ let j: number = 1900;
 //a)
 console.log("Aufgabe 5.a)");
 multiply(zahl1, zahl2);
-function multiply(a: number, b: number): void {
+function multiply(a: number, b: number): void { // anstatt void : number
     let ergebnis: number = a * b;
+    //return ergebnis; oder dirket return a * b;
     console.log (ergebnis);
 }
+// let mult: number = multiply (4, 5);
+// console.log (mult); oder console.log (multiply (2, 6));
 
 //b)
 console.log("Aufgabe 5.b)");
