@@ -25,14 +25,14 @@ var Aufgabe2_2;
         else if (zahl == 1) {
             return false;
         }
-        else if (zahl < 0) {
-            return isEven(-zahl);
+        else if (zahl < 0) { // wenn man ohne diese Funktion -1 eingibt kommt ein Erroe:Maximum call stack -> geht bis ins Unendliche
+            return isEven(-zahl); //Vorzeichenwechsel zu positiv
         }
         else {
             return isEven(zahl - 2);
         }
     }
-    console.log(isEven(-50)); //Zahl die überprüft werden soll
+    console.log(isEven(-1)); //Zahl die überprüft werden soll
     //Aufgabe 1. c):
     console.log("Aufgabe 1. c)");
     let s1 = { name: "Müller", vorname: "Max", alter: 22, matrikel: 123456 };
@@ -71,7 +71,58 @@ var Aufgabe2_2;
         }
     }
     let studi = new Student2(); //neuer Student
-    studi.createStudent2("Löffler", "Melanie", 23, 456637); //um Ihn zu kreieren muss man zuerst in den studi
+    studi.createStudent2("Kraus", "Melanie", 23, 456637); //um Ihn zu kreieren muss man zuerst in den studi
     studi.showInfo();
+    //Aufgabe 2 a):
+    let numberArray = [2, 5, 10, 13, 20];
+    let numberArray2 = [1, 4, 8, 15];
+    console.log("Aufgabe 2. a)");
+    console.log("Aufgabe 2. a) - reverse"); //einfachere Funktion
+    function backwards2() {
+        numberArray.reverse();
+    }
+    console.log(numberArray.reverse());
+    backwards2();
+    console.log("Aufgabe 2. a) - normal"); //ohne reverse Methode
+    console.log(backwards(numberArray));
+    function backwards(_arr) {
+        let back = []; //leeres Array
+        for (let i = _arr.length - 1; i >= 0; i--) {
+            back.push(_arr[i]); //stelle i in neues Array hinzufügen
+        }
+        return back;
+    }
+    //Aufgabe 2. b):
+    console.log("Aufgabe 2. b) - concat"); // einfachere Funktion mit concat
+    function join2() {
+        let zsm = numberArray.concat(numberArray2);
+        console.log(zsm);
+    }
+    join2();
+    console.log("Aufgabe 2. b) - normal"); // ohne Funktion
+    console.log(join(numberArray, numberArray2));
+    function join(_arr1, _arr2) {
+        let zsm = _arr1;
+        for (let i = 0; i < _arr2.length; i++) {
+            zsm.push(_arr2[i]);
+        }
+        return zsm;
+    }
+    //Aufgabe 2 c):
+    console.log("Aufgabe 2. c)");
+    console.log(split(numberArray, 1, 3));
+    function split(_arr3, _position1, _position2) {
+        let spanne = [];
+        for (let i = _position1; i <= _position2; i++) {
+            spanne.push(_arr3[i]);
+        }
+        return spanne;
+    }
+    //Aufgabe 3 a):
+    console.log("Aufgabe 3. a)");
+    let canvas = document.getElementById("Canvas_3.a)");
+    let contextBoden = canvas.getContext("2d");
+    contextBoden.fillStyle = "green";
+    contextBoden.fillRect(10, 300, 400, 50);
 })(Aufgabe2_2 || (Aufgabe2_2 = {})); //Ende namespace
 //# sourceMappingURL=script.js.map
