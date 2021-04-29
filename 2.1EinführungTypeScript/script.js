@@ -76,6 +76,8 @@ lokale = Variablen welche nur innerhalb der Klammern {} bzw. hier innerhalb der 
 
 Unterschied: Variablen speichern Typ und Wert, hingegen können Funktionen mit ihnen arbeiten.
 Gemeinsam: haben an sich keinen Rückgabewert (void) außer man möchte etwas zurück bekommen
+VERBESSERUNG Gemeinsam: "Sowohl Variablen als auch Funktionen haben eine Typbezeichnung.
+Bei der Funktion beschreibt diese den Typ des Rückgabewerts."
 */
 //Aufgabe 5:
 let zahl1 = 5;
@@ -87,8 +89,11 @@ console.log("Aufgabe 5.a)");
 multiply(zahl1, zahl2);
 function multiply(a, b) {
     let ergebnis = a * b;
+    //return ergebnis; oder dirket return a * b;
     console.log(ergebnis);
 }
+// let mult: number = multiply (4, 5);
+// console.log (mult); oder console.log (multiply (2, 6));
 //b)
 console.log("Aufgabe 5.b)");
 max(zahl1, zahl2);
