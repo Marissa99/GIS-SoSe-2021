@@ -1,5 +1,5 @@
 namespace Aufgabe2_2 {
-
+    
     //Aufgabe 1. a):
 
     console.log("Aufgabe 1. a)"); 
@@ -169,6 +169,8 @@ namespace Aufgabe2_2 {
     let contextBlatt3: CanvasRenderingContext2D = canvas.getContext("2d");
     let contextTür: CanvasRenderingContext2D = canvas.getContext("2d");
     let contextWolken: CanvasRenderingContext2D = canvas.getContext("2d");
+    let contextWolken2: CanvasRenderingContext2D = canvas.getContext("2d");
+    let contextWolken3: CanvasRenderingContext2D = canvas.getContext("2d");
 
     contextBoden.fillStyle = "green";
     contextBoden.fillRect (10, 300, 400, 50);
@@ -193,13 +195,18 @@ namespace Aufgabe2_2 {
 
     contextWolken.fillStyle = "white";
     contextWolken.beginPath();
-    contextWolken.moveTo(75, 40);
-    contextWolken.bezierCurveTo(100, 37, 70, 25, 50, 25);
-    contextWolken.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
-    contextWolken.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
-    contextWolken.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
-    contextWolken.bezierCurveTo(85, 25, 75, 37, 75, 40);
+    contextWolken.ellipse(300, 70, 30, 70, Math.PI / 3, 0, 2 * Math.PI);
     contextWolken.fill();
+
+    contextWolken2.fillStyle = "white";
+    contextWolken2.beginPath();
+    contextWolken2.ellipse(300, 70, 30, 70, Math.PI / 2, 0, 2 * Math.PI);
+    contextWolken2.fill();
+
+    contextWolken3.fillStyle = "white";
+    contextWolken3.beginPath();
+    contextWolken3.ellipse(300, 70, 30, 70, Math.PI / 1.4, 0, 2 * Math.PI);
+    contextWolken3.fill();
 
     contextBlatt.fillStyle = "green";
     contextBlatt.beginPath();
@@ -297,5 +304,5 @@ namespace Aufgabe2_2 {
         rechteckArray[i].drawRect();
     }
 
-    console.log("Für die Bonus Aufgabe 3. f) und g) hatte ich leider keine Zeit mehr, da ich an den anderen schon echt lange saß.");
+    console.log("Für die Bonus Aufgabe 3. f) und g) hatte ich leider keine Zeit mehr, da ich an den anderen Aufgaben schon echt lange saß und noch andere Abgaben machen musste.");
 }//Ende namespace
