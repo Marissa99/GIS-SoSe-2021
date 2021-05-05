@@ -111,6 +111,7 @@ namespace Aufgabe2_2 {
     console.log(numberArray.reverse());
     backwards2();
 
+    
     console.log("Aufgabe 2. a) - normal"); //ohne reverse Methode
     console.log (backwards(numberArray));
     function backwards(_arr: number[]): number[] {
