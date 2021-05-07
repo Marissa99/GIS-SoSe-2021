@@ -41,10 +41,9 @@ var Aufgabe2_3;
         document.body.appendChild(div);
     }
     //Aufgabe 2
-    //a)
-    //b)
-    //c)
-    //d) 
+    //a) und b) interface.ts Datei
+    //c) data.ts
+    //d) extra Datei - Bild Übersicht
     //Aufgabe 3
     //a)
     //b)
