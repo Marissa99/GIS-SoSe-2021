@@ -3,7 +3,7 @@ namespace Aufgabe2_3 {
     //Aufgabe 1
     //Button Rechteck hinzufügen
     let buttonAdd: HTMLButtonElement = document.createElement("button");
-    buttonAdd.style.backgroundColor = "red";
+    buttonAdd.style.backgroundColor = "green";
     buttonAdd.style.width = "100px";
     buttonAdd.style.height = "50px";
     buttonAdd.style.height = "absolute";
@@ -22,7 +22,7 @@ namespace Aufgabe2_3 {
 
     //Button zurücksetzen
     let buttonBack: HTMLButtonElement = document.createElement("button");
-    buttonBack.style.backgroundColor = "orange";
+    buttonBack.style.backgroundColor = "red";
     buttonBack.style.width = "100px";
     buttonBack.style.height = "50px";
     buttonBack.style.height = "absolute";

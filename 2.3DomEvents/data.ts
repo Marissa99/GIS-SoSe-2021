@@ -1,7 +1,7 @@
 namespace Aufgabe2_3 {
 
     //Aufgabe 2 c):
-    let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("Canvas_2");
+   
     
     //Kugelauswahl
     export let alleKugeln: Eiskugel[] = [];
