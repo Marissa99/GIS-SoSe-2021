@@ -8,16 +8,16 @@ namespace Aufgabe2_3 {
         waffel: Waffel;
         streussel: Essrohr;
     }
-
+    export interface Waffel {
+        farbe: string;
+        form: CanvasRenderingContext2D;
+    } 
     export interface Eiskugel {
         sorte: string; 
         farbe: string;
         form: CanvasRenderingContext2D;
     }
-    export interface Waffel {
-        farbe: string;
-        form: CanvasRenderingContext2D;
-    }  
+    
     export interface Essrohr {
         farbe: string;
         form: CanvasRenderingContext2D;
