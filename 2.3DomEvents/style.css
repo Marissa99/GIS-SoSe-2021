@@ -1,0 +1,47 @@
+h1 {
+    transition: color 4s ease-in-out 0s;
+    color:lightsalmon;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4.0em;
+    text-shadow: rgb(243, 86, 68) 0.05em 0.05em 0.05em;
+    background-color:darkgrey;
+    padding: 50px 50px 50px 50px;
+    border-radius: 50px;
+    margin:auto;
+    text-align: center;
+}
+h2{
+    color:salmon;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#Auswahl1{
+    color: black;
+    background-color:darkgray;
+    margin: 10px 20px 10px 10px;
+    text-align: center;
+}
+
+#Auswahl2{
+    color: black;
+    background-color:darkgray;
+    margin: 10px 20px 10px 10px;
+    text-align: center;
+}
+
+#Auswahl3{
+    color: black;
+    background-color:darkgray;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+#Navigation{
+    color: black;
+    background-color:darkgray;
+}
+
+button:hover{
+    padding: 10px 10px 10px 10px;
+   
+}

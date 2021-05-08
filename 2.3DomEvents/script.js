@@ -42,11 +42,12 @@ var Aufgabe2_3;
     }
     //Aufgabe 2
     //a) und b) interface.ts Datei
-    //c) data.ts
-    //d) extra Datei - Bild Übersicht
+    //c) data.ts Datei
+    //d) extra Datei - Bild Übersicht handschriftlich
     //Aufgabe 3
-    //a)
-    //b)
-    //c)
+    //a)Startsteite.html und Waffel.html Datei hart gecodet und style.css 
+    //b) Daten in der data.ts (canvas) und style.css
+    //--> da die verschiedenen Auswahlmöglichkeiten in canvas gespeichert werden, ist die Anzahl variabel
+    //c) script2.ts Datei
 })(Aufgabe2_3 || (Aufgabe2_3 = {}));
 //# sourceMappingURL=script.js.map
