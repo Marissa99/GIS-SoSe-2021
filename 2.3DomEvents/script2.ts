@@ -27,11 +27,11 @@ namespace Aufgabe2_3 {
     }
 
     function Save2 (_speichern: Event): void { 
-        //console.log(_event); //hier würde die Auswahl in das Objekt Eis gespeichert werden
+        //console.log(_speicher); //hier würde die Auswahl in das Objekt Eis gespeichert werden
         zeigeInfos((1));
     }
     function Save3 (_speichern: Event): void { 
-        //console.log(_event); //hier würde die Auswahl in das Objekt Eis gespeichert werden
+        //console.log(_speichern); //hier würde die Auswahl in das Objekt Eis gespeichert werden
         zeigeInfos((2));
     }
 
