@@ -6,6 +6,9 @@ namespace Aufgabe2_3 {
     //b) Daten in der data.ts (canvas) und style.css
     //--> da die verschiedenen Auswahlmöglichkeiten in canvas gespeichert werden, ist die Anzahl variabel
     //c) script2.ts Datei
+
+    //Ich weiß dass die drei Funktionen 'Save' so sicher nicht gedacht waren, jedoch bin ich einfach auf keine einfachere Lösung gekommen.
+    //Ich speichere zwar meine Auswahl in einem Array kann, dies aber dann nur ganz am Ende ausgeben, wenn ich mein ganzes Interface Eis übergeben kann. 
  
     
     let button1: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("Auswahl1");
@@ -19,7 +22,7 @@ namespace Aufgabe2_3 {
 
 
     function Save1 (_speichern: Event): void { 
-    //console.log(_speichern); //hier würde die Auswahl in das Objekt Eis gespeichert werden
+    //console.log(_speichern); //hier würde die Auswahl in Objekt Waffel und dann in das gesamte Objekt Eis gespeichert werden
         zeigeInfos((0));
     }
 
@@ -33,8 +36,8 @@ namespace Aufgabe2_3 {
     }
 
 
-    function zeigeInfos (_event: number): void {
-    console.log("Gewählte Waffel:" + alleWaffeln[_event].farbe);
+    function zeigeInfos (_index: number): void {
+    console.log("Gewählte Waffel:" + alleWaffeln[_index].farbe);
     
     }
 }
