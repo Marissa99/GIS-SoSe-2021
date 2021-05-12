@@ -16,6 +16,8 @@ var Aufgabe2_3;
         let div = document.createElement("div");
         div.style.height = (Math.random() * 100).toString() + "px";
         div.style.width = (Math.random() * 100).toString() + "px";
+        div.style.top = getRandom() + "px";
+        div.style.left = getRandom() + "px";
         div.style.backgroundColor = "black";
         document.body.appendChild(div);
     }
@@ -37,7 +39,9 @@ var Aufgabe2_3;
         let div = document.createElement("div");
         div.style.height = (Math.random() * 100).toString() + "px";
         div.style.width = (Math.random() * 100).toString() + "px";
-        div.style.backgroundColor = "black";
+        div.style.top = getRandom() + "px";
+        div.style.left = getRandom() + "px";
+        // div.style.backgroundColor = 
         document.body.appendChild(div);
     }
     //Aufgabe 2

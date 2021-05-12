@@ -16,8 +16,13 @@ namespace Aufgabe2_3 {
         let div: HTMLDivElement = document.createElement("div");
         div.style.height = (Math.random() * 100).toString() + "px";
         div.style.width =  (Math.random() * 100).toString() + "px";
+       // div.style.top = getRandom(20, 200) + "px";
+       // div.style.left = getRandom() + "px";
         div.style.backgroundColor = "black";
         document.body.appendChild(div);
+        
+        
+    
     }
 
     //Button zurücksetzen
@@ -41,7 +46,9 @@ namespace Aufgabe2_3 {
         let div: HTMLDivElement = document.createElement("div");
         div.style.height = (Math.random() * 100).toString() + "px";
         div.style.width =  (Math.random() * 100).toString() + "px";
-        div.style.backgroundColor = "black";
+        div.style.top = getRandom() + "px";
+        div.style.left = getRandom() + "px";
+       // div.style.backgroundColor = 
         document.body.appendChild(div);
     }
 
