@@ -1,7 +1,31 @@
 
 namespace Aufgabe2_3Verbesserung {
+    
+    function createWaffel(_waffel: Waffel): HTMLElement {
+        let div: HTMLDivElement = document.createElement("div");
+        div.style.maxWidth = "150px";
+        let image: HTMLImageElement = document.createElement ("img");
+        image.src = _waffel.image;
+        div.appendChild(image);
 
-   
+        let auswahlButton: HTMLElement = document.createElement("Button");
+        let auswahlText: Text = document.createTextNode (_waffel.image);
+        auswahlButton.appendChild(auswahlText); //Button und Text zusammenführen
+        document.body.appendChild(auswahlButton); //Button dem Body unterordnen
+        auswahlButton.addEventListener("click", waffelAuswahlSpeichern);
+        auswahlButton.dataset.image = _waffel.image;
+        return div;
+    }
+    for (let i: number = 0; i < _waffel.length; i++){
+        let waffelElement: HTMLElement = createWaffel(_waffel[i]);
+        document.body.appendChild(waffelElement);
+        console.log (waffelElement);
+    }
+    
+    function waffelAuswahlSpeichern(_input: MouseEvent): void {
+        let ausgabe: HTMLElement = <HTMLElement>_input.target; //Das target-Attribut gibt einen Namen oder ein Schlüsselwort an, das angibt, wo die Antwort angezeigt werden soll, die nach dem Absenden des Formulars eingeht.
+        console.log(ausgabe.dataset.image);
+    }
 
 /*
 let button1: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("Auswahl1");
