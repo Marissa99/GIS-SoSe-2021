@@ -1,7 +1,6 @@
 namespace Aufgabe2_3Verbesserung {
 
     //Aufgabe 2 a) 
-    export let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById ("Eis");
    
     export interface Waffel {
         image: string;
@@ -17,9 +16,15 @@ namespace Aufgabe2_3Verbesserung {
     }
 
     //Aufgabe 2 b)
-    export interface Eis {
+    export interface AlleAuswahlmöglichkeiten {
         waffeln: Waffel[];
         kugeln: Eiskugel[];
         topping: Topping[];
     }
+    export interface Eis {
+        waffel: Waffel;
+        kugel: Eiskugel;
+        topping: Topping;
+    }
+
 }

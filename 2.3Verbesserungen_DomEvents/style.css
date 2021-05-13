@@ -15,33 +15,22 @@ h2{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#Auswahl1{
-    color: black;
-    background-color:darkgray;
-    margin: 10px 20px 10px 10px;
-    text-align: center;
-}
-
-#Auswahl2{
-    color: black;
-    background-color:darkgray;
-    margin: 10px 20px 10px 10px;
-    text-align: center;
-}
-
-#Auswahl3{
-    color: black;
-    background-color:darkgray;
-    margin: 10px 10px 10px 10px;
-    text-align: center;
-}
-
 #Navigation{
     color: black;
     background-color:darkgray;
 }
+img{
+    max-width: 150px;
+    margin-left: 50px;
+    
+}
 
-button:hover{
-    padding: 10px 10px 10px 10px;
+button{
+    color: coral;
+    font-family: Arial, Helvetica, sans-serif;
    
+}
+.waffel{
+    font-family: Arial, Helvetica, sans-serif;
+
 }

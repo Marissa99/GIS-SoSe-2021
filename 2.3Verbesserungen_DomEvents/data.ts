@@ -4,9 +4,9 @@ namespace Aufgabe2_3Verbesserung {
     //Formen durch Bilder ersetzt 
 
    //Waffelauswahl
-   export let auswahl: Eis = { //Speicherung in das gesamte Eis
+   export let auswahl: AlleAuswahlmöglichkeiten  = { //Speicherung in das gesamte Eis
             waffeln: [
-           { image: "Bilder/Waffel/ice-2759699_640.jpg", name: "Weiße Waffel" },
+           { image: "Bilder/Waffel/ice-2759699_640.png", name: "Weiße Waffel" },
            { image: "Bilder/Waffel/ice-3762671_640.jpg", name: "Schwarze Waffel" },
            { image: "Bilder/Waffel/ice-5088718_640.jpg", name: "Braune Waffel"}
        ],
@@ -23,5 +23,4 @@ namespace Aufgabe2_3Verbesserung {
             { image: "Bilder/Topping/ice-1271986_640.jpg", name: "Sahne" }
         ]
     };
-
 }
