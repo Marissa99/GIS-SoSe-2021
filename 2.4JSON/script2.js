@@ -1,6 +1,7 @@
 "use strict";
-var Aufgabe2_3Verbesserung;
-(function (Aufgabe2_3Verbesserung) {
+var Aufgabe2_4;
+(function (Aufgabe2_4) {
+    let meinEis = konvertieren();
     function waffelDiv(_auswahl, _index) {
         let div = document.createElement("div");
         div.classList.add("waffel"); //div haben alle die Klasse "waffel"
@@ -16,16 +17,24 @@ var Aufgabe2_3Verbesserung;
         div.appendChild(button);
         return div;
         function ausgewaehlt(_event) {
-            console.log(_auswahl);
+            console.log("Ihre Auswahl:");
+            console.log("Name: " + _auswahl.name);
         }
     }
+    //Funktion aus Aufgabe 2.3
     function auswahlAnzeigen(_auswahl) {
         let anzeige = document.getElementById("Auswahlanzeige");
-        for (let i = 0; i < _auswahl.length; i++) { //dynamische Auswahlmöglichkeiten anzeigen lassen
+        for (let i = 0; i < _auswahl.length; i++) {
             let div = waffelDiv(_auswahl[i], i);
             anzeige.appendChild(div);
         }
     }
-    auswahlAnzeigen(Aufgabe2_3Verbesserung.auswahl.waffeln);
-})(Aufgabe2_3Verbesserung || (Aufgabe2_3Verbesserung = {}));
+    //auswahlAnzeigen(auswahl.waffeln);
+    //Aufgabe 1a):
+    function konvertieren() {
+        meinEis = JSON.parse(Aufgabe2_4.eisJSON);
+        return meinEis;
+    }
+    auswahlAnzeigen(meinEis.waffeln);
+})(Aufgabe2_4 || (Aufgabe2_4 = {}));
 //# sourceMappingURL=script2.js.map
