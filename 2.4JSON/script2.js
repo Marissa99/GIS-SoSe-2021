@@ -32,9 +32,12 @@ var Aufgabe2_4;
     //Aufgabe 1a):
     let meinEis = konvertieren();
     function konvertieren() {
-        meinEis = JSON.parse(Aufgabe2_4.eisJSON);
-        return meinEis;
+        let eis = JSON.parse(Aufgabe2_4.eisJSON);
+        return (eis);
     }
     auswahlAnzeigen(meinEis.waffeln);
 })(Aufgabe2_4 || (Aufgabe2_4 = {}));
+//Aufgabe 1b):
+//Aufgabe 1c):
+//Aufgabe 1d):
 //# sourceMappingURL=script2.js.map

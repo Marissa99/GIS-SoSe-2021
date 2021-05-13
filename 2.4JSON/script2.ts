@@ -40,11 +40,17 @@ namespace Aufgabe2_4 {
 
 //Aufgabe 1a):
 
-    let meinEis: AlleAuswahlmöglichkeiten = konvertieren();
+    let meinEis: AlleAuswahlmoeglichkeiten = konvertieren();
     
-    function konvertieren (): AlleAuswahlmöglichkeiten {
-    meinEis = JSON.parse(eisJSON);
-    return meinEis;
+    function konvertieren (): AlleAuswahlmoeglichkeiten {
+        let eis: AlleAuswahlmoeglichkeiten = JSON.parse(eisJSON);
+        return (eis);
 }
     auswahlAnzeigen(meinEis.waffeln);
 }
+//Aufgabe 1b):
+
+//Aufgabe 1c):
+
+//Aufgabe 1d):
+ 

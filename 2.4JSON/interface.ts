@@ -16,7 +16,7 @@ namespace Aufgabe2_4 {
     }
 
     //Aufgabe 2 b)
-    export interface AlleAuswahlmöglichkeiten {
+    export interface AlleAuswahlmoeglichkeiten {
         waffeln: Waffel[];
         kugeln: Eiskugel[];
         topping: Topping[];
