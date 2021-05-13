@@ -1,4 +1,3 @@
-
 namespace Aufgabe2_3Verbesserung {
 
 function waffelDiv (_auswahl: Waffel, _index: number): HTMLDivElement {
@@ -21,7 +20,7 @@ function waffelDiv (_auswahl: Waffel, _index: number): HTMLDivElement {
     return div;
 
     function ausgewaehlt(_event: Event): void {
-        console.log(_auswahl);
+        console.log("Ihre Auswahl: " + _auswahl.name);
     }   
 }
     

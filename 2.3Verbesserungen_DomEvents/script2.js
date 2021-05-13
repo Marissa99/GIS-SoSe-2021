@@ -16,7 +16,7 @@ var Aufgabe2_3Verbesserung;
         div.appendChild(button);
         return div;
         function ausgewaehlt(_event) {
-            console.log(_auswahl);
+            console.log("Ihre Auswahl: " + _auswahl.name);
         }
     }
     function auswahlAnzeigen(_auswahl) {
