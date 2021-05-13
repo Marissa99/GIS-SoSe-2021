@@ -1,17 +1,18 @@
 h1 {
     transition: color 4s ease-in-out 0s;
-    color:lightsalmon;
+    color:navy;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 4.0em;
-    text-shadow: rgb(243, 86, 68) 0.05em 0.05em 0.05em;
+    text-shadow: salmon;
     background-color:darkgrey;
     padding: 50px 50px 50px 50px;
     border-radius: 50px;
     margin:auto;
     text-align: center;
+    background-image: url(Bilder/ice-cream-5666480_1280.png);
 }
 h2{
-    color:salmon;
+    color: navy;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,21 +25,26 @@ img{
     margin-left: 50px;
     
 }
+#Titelbild{
+    min-width: 500px;
+}
 
 button{
     color: coral;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
+    font-size: larger;
    
 }
 .waffel{
     font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
 
 }
 body{
-    background-image: url(Bilder/flower-4931280_1920.jpg);
+    background-image: url(Bilder/background-1611576_1920.jpg);
+    min-width: 800px;
     
 }
 footer{
-    margin-top: 200px;
+    margin-top: 100px;
 }

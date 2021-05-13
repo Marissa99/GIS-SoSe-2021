@@ -6,7 +6,7 @@ var Aufgabe2_4;
         {
             "waffeln": [
                 { 
-                    image: "Bilder/Waffel/ice-2759699_640.png", 
+                    "image": "Bilder/Waffel/ice-2759699_640.png", 
                     "name": "Weiße Waffel" 
                 },
                 { 

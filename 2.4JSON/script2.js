@@ -1,7 +1,6 @@
 "use strict";
 var Aufgabe2_4;
 (function (Aufgabe2_4) {
-    let meinEis = konvertieren();
     function waffelDiv(_auswahl, _index) {
         let div = document.createElement("div");
         div.classList.add("waffel"); //div haben alle die Klasse "waffel"
@@ -29,8 +28,9 @@ var Aufgabe2_4;
             anzeige.appendChild(div);
         }
     }
-    //auswahlAnzeigen(auswahl.waffeln);
+    //auswahlAnzeigen(auswahl.waffeln); noch von Aufgabe 2.3
     //Aufgabe 1a):
+    let meinEis = konvertieren();
     function konvertieren() {
         meinEis = JSON.parse(Aufgabe2_4.eisJSON);
         return meinEis;

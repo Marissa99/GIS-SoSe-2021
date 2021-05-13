@@ -7,7 +7,7 @@ export let eisJSON: string =
         {
             "waffeln": [
                 { 
-                    image: "Bilder/Waffel/ice-2759699_640.png", 
+                    "image": "Bilder/Waffel/ice-2759699_640.png", 
                     "name": "Weiße Waffel" 
                 },
                 { 

@@ -1,6 +1,6 @@
 
 namespace Aufgabe2_4 {
-    let meinEis: AlleAuswahlmöglichkeiten = konvertieren();
+   
 
     function waffelDiv (_auswahl: Waffel, _index: number): HTMLDivElement {
     let div: HTMLDivElement = document.createElement("div");
@@ -35,10 +35,13 @@ namespace Aufgabe2_4 {
         anzeige.appendChild(div);
         }
     }
-//auswahlAnzeigen(auswahl.waffeln);
+//auswahlAnzeigen(auswahl.waffeln); noch von Aufgabe 2.3
 
 
 //Aufgabe 1a):
+
+    let meinEis: AlleAuswahlmöglichkeiten = konvertieren();
+    
     function konvertieren (): AlleAuswahlmöglichkeiten {
     meinEis = JSON.parse(eisJSON);
     return meinEis;
