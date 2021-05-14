@@ -22,7 +22,7 @@ export let eisJSON: string =
             "kugeln": [
                 { 
                     "image": "Bilder/Eissorte/chocolates-2224998_640.jpg",
-                    "name": "Schokoeis" 
+                    "name": "Schokoeis"
                 },
                 { 
                     "image": "Bilder/Eissorte/ice-cream-1440830_640.jpg", 
@@ -30,13 +30,13 @@ export let eisJSON: string =
                 },
                 { 
                     "image": "Bilder/Eissorte/strawberries-3359755_640.jpg",
-                    "name": "Braune Waffel" 
+                    "name": "Erdbeereis"
                  }
             ],
             "toppings": [
                 { 
                     "image": "Bilder/Topping/berries-2277_640.jpg",
-                    "name": "Beeren" 
+                    "name": "Beeren"
                 },
                 { 
                     "image": "Bilder/Topping/colourful-vermicelli-50723_640.jpg", 
@@ -44,7 +44,7 @@ export let eisJSON: string =
                 },
                 { 
                     "image": "Bilder/Topping/ice-1271986_640.jpg",
-                    "name": "Sahne" 
+                    "name": "Sahne"
                 }
             ]
         }

@@ -1,18 +1,24 @@
 namespace Aufgabe2_4 {
 
     //Aufgabe 2 a) 
-   
-    export interface Waffel {
-        image: string;
-        name: string;
-    } 
-    export interface Eiskugel {
+    export interface Eiskreation { //interface welches die Auswahl beeinhaltet
         image: string;
         name: string;
     }
-    export interface Topping {
+   
+    export interface Waffel extends Eiskreation {
         image: string;
         name: string;
+    } 
+    export interface Eiskugel extends Eiskreation {
+        image: string;
+        name: string;
+        
+    }
+    export interface Topping extends Eiskreation {
+        image: string;
+        name: string;
+    
     }
 
     //Aufgabe 2 b)
@@ -26,5 +32,4 @@ namespace Aufgabe2_4 {
         kugel: Eiskugel;
         topping: Topping;
     }
-
 }
