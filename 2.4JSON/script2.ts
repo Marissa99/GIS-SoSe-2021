@@ -25,8 +25,8 @@ namespace Aufgabe2_4 {
         console.log("Ihre Auswahl:");
         console.log("Name: " + _auswahl.name);
         //Aufgabe 1b)
-
-        sessionStorage.setItem ("image1", _auswahl.image); //Erste Auswahlr wurde gespeichert
+        sessionStorage.setItem ("image", _auswahl.image); //Erste Auswahl wurde gespeichert
+        
     }   
 }
     
@@ -38,6 +38,7 @@ namespace Aufgabe2_4 {
         for (let i: number = 0; i < _auswahl.waffeln.length; i++) {  
             let div: HTMLDivElement = EisDiv (_auswahl.waffeln[i], i);
             anzeige.appendChild(div);
+            
         }
     }
     else if (document.querySelector ("title"). getAttribute("id") == "Seite2") {
@@ -50,10 +51,11 @@ namespace Aufgabe2_4 {
         for (let i: number = 0; i < _auswahl.topping.length; i++) {  
             let div: HTMLDivElement = EisDiv (_auswahl.topping[i], i);
             anzeige.appendChild(div);
-         }
+        }
     }
-
 }
+
+    
 
 //Aufgabe 1a):
 
@@ -62,31 +64,36 @@ namespace Aufgabe2_4 {
     function konvertieren (): AlleAuswahlmoeglichkeiten {
         let eis: AlleAuswahlmoeglichkeiten = JSON.parse(eisJSON);
         return (eis);
-}
+    }
     auswahlAnzeigen(meinEis); 
-}
+
 
 //Aufgabe 1d):
-let bisherigeAuswahl: HTMLDivElement = <HTMLDivElement> document.getElementById ("bisherigeAuswahl");
+    let bisherigeAuswahl: HTMLDivElement = <HTMLDivElement> document.getElementById ("bisherigeAuswahl");
 
-if (document.querySelector ("title"). getAttribute("id") == "Seite1") {
+    /*if (document.querySelector ("title"). getAttribute("id") == "Seite1") {
     let auswahlImage: HTMLImageElement = document.createElement ("img");
-    auswahlImage.src = sessionStorage.getItem("image1");
+    auswahlImage.src = sessionStorage.getItem("image");
     bisherigeAuswahl.appendChild(auswahlImage);
-}
-else if (document.querySelector ("title"). getAttribute("id") == "Seite2") {
-    let auswahlImage: HTMLImageElement = document.createElement ("img");
-    auswahlImage.src = sessionStorage.getItem("image1");
-    auswahlImage.src = sessionStorage.getItem("image2");
-    bisherigeAuswahl.appendChild(auswahlImage);
-}
-else if (document.querySelector ("title"). getAttribute("id") == "Seite3") {
-    let auswahlImage: HTMLImageElement = document.createElement ("img");
-    auswahlImage.src = sessionStorage.getItem("image1");
-    auswahlImage.src = sessionStorage.getItem("image2");
-    auswahlImage.src = sessionStorage.getItem("image3");
-    bisherigeAuswahl.appendChild(auswahlImage);
- 
-
+    }*/
+    if (document.querySelector ("title"). getAttribute("id") == "Seite2") {
+        let auswahlImage: HTMLImageElement = document.createElement ("img");
+        auswahlImage.src = sessionStorage.getItem("image");
+        bisherigeAuswahl.appendChild(auswahlImage);
+    }
+    else if (document.querySelector ("title"). getAttribute("id") == "Seite3") {
+        let auswahlImage: HTMLImageElement = document.createElement ("img");
+        auswahlImage.src = sessionStorage.getItem("image");
+        auswahlImage.src = sessionStorage.getItem("image");
+        auswahlImage.src = sessionStorage.getItem("image");
+        bisherigeAuswahl.appendChild(auswahlImage);
+    }
 //Aufgabe 2:
-}
+    else if (document.querySelector ("title"). getAttribute("id") == "Seite4") {
+        let auswahlImage: HTMLImageElement = document.createElement ("img");
+        auswahlImage.src = sessionStorage.getItem("image");
+        auswahlImage.src = sessionStorage.getItem("image");
+        auswahlImage.src = sessionStorage.getItem("image");
+        bisherigeAuswahl.appendChild(auswahlImage);
+    }
+}//Ende Namespace

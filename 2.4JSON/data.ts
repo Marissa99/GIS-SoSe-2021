@@ -33,7 +33,7 @@ export let eisJSON: string =
                     "name": "Erdbeereis"
                  }
             ],
-            "toppings": [
+            "topping": [
                 { 
                     "image": "Bilder/Topping/berries-2277_640.jpg",
                     "name": "Beeren"

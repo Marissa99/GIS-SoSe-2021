@@ -19,7 +19,7 @@ var Aufgabe2_4;
             console.log("Ihre Auswahl:");
             console.log("Name: " + _auswahl.name);
             //Aufgabe 1b)
-            sessionStorage.setItem("image1", _auswahl.image); //Erste Auswahlr wurde gespeichert
+            sessionStorage.setItem("image", _auswahl.image); //Erste Auswahl wurde gespeichert
         }
     }
     //Aufgabe 1c)
@@ -51,26 +51,32 @@ var Aufgabe2_4;
         return (eis);
     }
     auswahlAnzeigen(meinEis);
-})(Aufgabe2_4 || (Aufgabe2_4 = {}));
-//Aufgabe 1d):
-let bisherigeAuswahl = document.getElementById("bisherigeAuswahl");
-if (document.querySelector("title").getAttribute("id") == "Seite1") {
-    let auswahlImage = document.createElement("img");
-    auswahlImage.src = sessionStorage.getItem("image1");
+    //Aufgabe 1d):
+    let bisherigeAuswahl = document.getElementById("bisherigeAuswahl");
+    /*if (document.querySelector ("title"). getAttribute("id") == "Seite1") {
+    let auswahlImage: HTMLImageElement = document.createElement ("img");
+    auswahlImage.src = sessionStorage.getItem("image");
     bisherigeAuswahl.appendChild(auswahlImage);
-}
-else if (document.querySelector("title").getAttribute("id") == "Seite2") {
-    let auswahlImage = document.createElement("img");
-    auswahlImage.src = sessionStorage.getItem("image1");
-    auswahlImage.src = sessionStorage.getItem("image2");
-    bisherigeAuswahl.appendChild(auswahlImage);
-}
-else if (document.querySelector("title").getAttribute("id") == "Seite3") {
-    let auswahlImage = document.createElement("img");
-    auswahlImage.src = sessionStorage.getItem("image1");
-    auswahlImage.src = sessionStorage.getItem("image2");
-    auswahlImage.src = sessionStorage.getItem("image3");
-    bisherigeAuswahl.appendChild(auswahlImage);
+    }*/
+    if (document.querySelector("title").getAttribute("id") == "Seite2") {
+        let auswahlImage = document.createElement("img");
+        auswahlImage.src = sessionStorage.getItem("image");
+        bisherigeAuswahl.appendChild(auswahlImage);
+    }
+    else if (document.querySelector("title").getAttribute("id") == "Seite3") {
+        let auswahlImage = document.createElement("img");
+        auswahlImage.src = sessionStorage.getItem("image");
+        auswahlImage.src = sessionStorage.getItem("image");
+        auswahlImage.src = sessionStorage.getItem("image");
+        bisherigeAuswahl.appendChild(auswahlImage);
+    }
     //Aufgabe 2:
-}
+    else if (document.querySelector("title").getAttribute("id") == "Seite4") {
+        let auswahlImage = document.createElement("img");
+        auswahlImage.src = sessionStorage.getItem("image");
+        auswahlImage.src = sessionStorage.getItem("image");
+        auswahlImage.src = sessionStorage.getItem("image");
+        bisherigeAuswahl.appendChild(auswahlImage);
+    }
+})(Aufgabe2_4 || (Aufgabe2_4 = {})); //Ende Namespace
 //# sourceMappingURL=script2.js.map
