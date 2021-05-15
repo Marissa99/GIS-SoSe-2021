@@ -29,6 +29,7 @@ namespace Aufgabe2_4 {
     if ((document.querySelector("title").getAttribute("id") == "Seite3" )) {
         button.addEventListener("click", auswahlTopping); //Entschiedung, wann welche Funktion bzw. Seite aufgerufen wird
     }
+    
 
     return div;
 
@@ -116,4 +117,6 @@ namespace Aufgabe2_4 {
         auswahlImage3.src = sessionStorage.getItem("image3");
         bisherigeAuswahl.appendChild(auswahlImage3);
     }
+
+    
 }//Ende Namespace
