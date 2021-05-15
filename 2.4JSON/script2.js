@@ -14,15 +14,33 @@ var Aufgabe2_4;
         button.innerText = "auswählen";
         button.addEventListener("click", ausgewaehltKreation);
         div.appendChild(button);
+        if ((document.querySelector("title").getAttribute("id") == "Seite2")) {
+            button.addEventListener("click", auswahlKugel);
+            div.appendChild(button);
+            function auswahlKugel(_event) {
+                console.log("Ihre Auswahl:");
+                console.log("Name: " + _auswahl.name);
+                sessionStorage.setItem("image2", _auswahl.image); //Bild des ausgewählten Segels speichern 
+            }
+        }
+        if ((document.querySelector("title").getAttribute("id") == "Seite3")) {
+            button.addEventListener("click", auswahlTopping);
+            div.appendChild(button);
+            function auswahlTopping(_event) {
+                console.log("Ihre Auswahl:");
+                console.log("Name: " + _auswahl.name); //Auskunft noch als Überprüfung dringelassen 
+                sessionStorage.setItem("image3", _auswahl.image); //Bild des ausgewählten Segels speichern 
+            }
+        }
         return div;
         function ausgewaehltKreation(_event) {
             console.log("Ihre Auswahl:");
             console.log("Name: " + _auswahl.name);
             //Aufgabe 1b)
-            sessionStorage.setItem("image", _auswahl.image); //Erste Auswahl wurde gespeichert
+            sessionStorage.setItem("image1", _auswahl.image); //Erste Auswahl wurde gespeichert
         }
     }
-    //Aufgabe 1c)
+    //Aufgabe 1c) Aufrufen der verschiedenen Auswahhlen auf den verschiedenen Seiten
     function auswahlAnzeigen(_auswahl) {
         let anzeige = document.getElementById("Auswahlanzeige");
         if (document.querySelector("title").getAttribute("id") == "Seite1") {
@@ -44,7 +62,7 @@ var Aufgabe2_4;
             }
         }
     }
-    //Aufgabe 1a):
+    //Aufgabe 1a): JSON Sting konvertieren
     let meinEis = konvertieren();
     function konvertieren() {
         let eis = JSON.parse(Aufgabe2_4.eisJSON);
@@ -53,30 +71,31 @@ var Aufgabe2_4;
     auswahlAnzeigen(meinEis);
     //Aufgabe 1d):
     let bisherigeAuswahl = document.getElementById("bisherigeAuswahl");
-    /*if (document.querySelector ("title"). getAttribute("id") == "Seite1") {
-    let auswahlImage: HTMLImageElement = document.createElement ("img");
-    auswahlImage.src = sessionStorage.getItem("image");
-    bisherigeAuswahl.appendChild(auswahlImage);
-    }*/
-    if (document.querySelector("title").getAttribute("id") == "Seite2") {
+    bisherigeAuswahl.classList.add("auswahlBisher");
+    if (document.querySelector("title").getAttribute("id") == "Seite2") { //Auf der Kugelseite soll die bisherige Waffelauswahl angezeigt werden
         let auswahlImage = document.createElement("img");
-        auswahlImage.src = sessionStorage.getItem("image");
+        auswahlImage.src = sessionStorage.getItem("image1");
         bisherigeAuswahl.appendChild(auswahlImage);
     }
-    else if (document.querySelector("title").getAttribute("id") == "Seite3") {
+    else if (document.querySelector("title").getAttribute("id") == "Seite3") { //Auf der Toppingseite soll die bisherige Waffel- und Kugelauswahl angezeigt werden
         let auswahlImage = document.createElement("img");
-        auswahlImage.src = sessionStorage.getItem("image");
-        auswahlImage.src = sessionStorage.getItem("image");
-        auswahlImage.src = sessionStorage.getItem("image");
+        auswahlImage.src = sessionStorage.getItem("image1");
         bisherigeAuswahl.appendChild(auswahlImage);
+        let auswahlImage2 = document.createElement("img");
+        auswahlImage2.src = sessionStorage.getItem("image2");
+        bisherigeAuswahl.appendChild(auswahlImage2);
     }
     //Aufgabe 2:
-    else if (document.querySelector("title").getAttribute("id") == "Seite4") {
+    else if (document.querySelector("title").getAttribute("id") == "Seite4") { //Hier soll alles ausgewählte angezeigt werden
         let auswahlImage = document.createElement("img");
-        auswahlImage.src = sessionStorage.getItem("image");
-        auswahlImage.src = sessionStorage.getItem("image");
-        auswahlImage.src = sessionStorage.getItem("image");
+        auswahlImage.src = sessionStorage.getItem("image1");
         bisherigeAuswahl.appendChild(auswahlImage);
+        let auswahlImage2 = document.createElement("img");
+        auswahlImage2.src = sessionStorage.getItem("image2");
+        bisherigeAuswahl.appendChild(auswahlImage2);
+        let auswahlImage3 = document.createElement("img");
+        auswahlImage3.src = sessionStorage.getItem("image3");
+        bisherigeAuswahl.appendChild(auswahlImage3);
     }
 })(Aufgabe2_4 || (Aufgabe2_4 = {})); //Ende Namespace
 //# sourceMappingURL=script2.js.map
