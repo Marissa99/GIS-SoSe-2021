@@ -6,20 +6,11 @@ namespace Aufgabe2_4 {
         name: string;
     }
    
-    export interface Waffel extends Eiskreation {
-        image: string;
-        name: string;
-    } 
-    export interface Eiskugel extends Eiskreation {
-        image: string;
-        name: string;
-        
-    }
-    export interface Topping extends Eiskreation {
-        image: string;
-        name: string;
-    
-    }
+    export interface Waffel extends Eiskreation {} //erben alle Attribute der Eiskreation
+
+    export interface Eiskugel extends Eiskreation {}
+
+    export interface Topping extends Eiskreation {}
 
     //Aufgabe 2 b)
     export interface AlleAuswahlmoeglichkeiten {
@@ -27,6 +18,7 @@ namespace Aufgabe2_4 {
         kugeln: Eiskugel[];
         topping: Topping[];
     }
+    
     export interface Eis {
         waffel: Waffel;
         kugel: Eiskugel;

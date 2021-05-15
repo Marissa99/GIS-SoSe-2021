@@ -12,32 +12,34 @@ var Aufgabe2_4;
         div.appendChild(span);
         let button = document.createElement("button");
         button.innerText = "auswählen";
-        button.addEventListener("click", ausgewaehltKreation);
         div.appendChild(button);
+        if ((document.querySelector("title").getAttribute("id") == "Seite1")) {
+            button.addEventListener("click", auswahlWaffel); //Entschiedung, wann welche Funktion bzw. Seite aufgerufen wird
+        }
         if ((document.querySelector("title").getAttribute("id") == "Seite2")) {
-            button.addEventListener("click", auswahlKugel);
-            div.appendChild(button);
-            function auswahlKugel(_event) {
-                console.log("Ihre Auswahl:");
-                console.log("Name: " + _auswahl.name);
-                sessionStorage.setItem("image2", _auswahl.image); //Bild des ausgewählten Segels speichern 
-            }
+            button.addEventListener("click", auswahlKugel); //Entschiedung, wann welche Funktion bzw. Seite aufgerufen wird
         }
         if ((document.querySelector("title").getAttribute("id") == "Seite3")) {
-            button.addEventListener("click", auswahlTopping);
-            div.appendChild(button);
-            function auswahlTopping(_event) {
-                console.log("Ihre Auswahl:");
-                console.log("Name: " + _auswahl.name); //Auskunft noch als Überprüfung dringelassen 
-                sessionStorage.setItem("image3", _auswahl.image); //Bild des ausgewählten Segels speichern 
-            }
+            button.addEventListener("click", auswahlTopping); //Entschiedung, wann welche Funktion bzw. Seite aufgerufen wird
         }
         return div;
-        function ausgewaehltKreation(_event) {
+        function auswahlWaffel(_event) {
+            console.log("Ihre Auswahl:");
+            console.log("Name: " + _auswahl.name); //Auskunft noch als Überprüfung dringelassen 
+            sessionStorage.setItem("image1", _auswahl.image);
+            location.href = "indexKugel.html"; //direktes weiterleiten zur nächsten Seite
+        }
+        function auswahlKugel(_event) {
             console.log("Ihre Auswahl:");
             console.log("Name: " + _auswahl.name);
-            //Aufgabe 1b)
-            sessionStorage.setItem("image1", _auswahl.image); //Erste Auswahl wurde gespeichert
+            sessionStorage.setItem("image2", _auswahl.image);
+            location.href = "indexTopping.html";
+        }
+        function auswahlTopping(_event) {
+            console.log("Ihre Auswahl:");
+            console.log("Name: " + _auswahl.name);
+            sessionStorage.setItem("image3", _auswahl.image);
+            location.href = "indexEisGesamt.html";
         }
     }
     //Aufgabe 1c) Aufrufen der verschiedenen Auswahhlen auf den verschiedenen Seiten
