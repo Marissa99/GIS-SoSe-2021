@@ -18,7 +18,7 @@ namespace Aufgabe2_4 {
     button.innerText = "auswählen";
     div.appendChild(button);
     
-    
+    //hätte zusammengefasst werden können, indem man entwerder eine Funktion einfügt oder man mit einer for-Schleife durchgeht
     if ((document.querySelector("title").getAttribute("id") == "Seite1" )) {
         button.addEventListener("click", auswahlWaffel); //Entschiedung, wann welche Funktion bzw. Seite aufgerufen wird
     }
@@ -31,9 +31,8 @@ namespace Aufgabe2_4 {
         button.addEventListener("click", auswahlTopping); //Entschiedung, wann welche Funktion bzw. Seite aufgerufen wird
     }
     
-
     return div;
-
+ //hätte zusammengefasst werden können, indem man nue eine Funktion hat und hier Übergabeparameter verwendet
     function auswahlWaffel(_event: Event): void {
         console.log("Ihre Auswahl:");
         console.log("Name: " + _auswahl.name); //Auskunft noch als Überprüfung dringelassen 
