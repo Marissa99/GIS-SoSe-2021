@@ -18,6 +18,7 @@ namespace Aufgabe2_4 {
     button.innerText = "auswählen";
     div.appendChild(button);
     
+    
     if ((document.querySelector("title").getAttribute("id") == "Seite1" )) {
         button.addEventListener("click", auswahlWaffel); //Entschiedung, wann welche Funktion bzw. Seite aufgerufen wird
     }

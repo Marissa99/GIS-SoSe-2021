@@ -88,6 +88,7 @@ var Aufgabe2_4;
         bisherigeAuswahl.appendChild(auswahlImage2);
     }
     //Aufgabe 2:
+    //Da ich das Eis nicht wirklich "zusammenbauen" kann, wird hier die Auswahl in Bildern mit Lücken dargestellt 
     else if (document.querySelector("title").getAttribute("id") == "Seite4") { //Hier soll alles ausgewählte angezeigt werden
         let auswahlImage = document.createElement("img");
         auswahlImage.src = sessionStorage.getItem("image1");
