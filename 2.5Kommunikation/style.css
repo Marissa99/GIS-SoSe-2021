@@ -1,0 +1,58 @@
+h1 {
+    transition: color 4s ease-in-out 0s;
+    color:navy;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4.0em;
+    text-shadow: salmon;
+    background-color:darkgrey;
+    padding: 50px 50px 50px 50px;
+    border-radius: 50px;
+    margin:auto;
+    text-align: center;
+    background-image: url(Bilder/ice-cream-5666480_1280.png);
+}
+h2{
+    color: navy;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#Navigation{
+    color: black;
+    background-color:darkgray;
+}
+img{
+    max-width: 150px;
+    margin-left: 50px;
+    
+}
+#Titelbild{
+    min-width: 500px;
+}
+
+button{
+    color: coral;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    margin-left: 50px;
+}
+
+.Eiskreation{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+
+}
+body{
+    background-image: url(Bilder/background-1611576_1920.jpg);
+    background-size: 2500px;
+}
+footer{
+    margin-top: 100px;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    margin-left: 50px;
+    font-size: large;
+    color: navy;
+}
