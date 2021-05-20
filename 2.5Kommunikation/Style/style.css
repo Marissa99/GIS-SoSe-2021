@@ -9,7 +9,7 @@ h1 {
     border-radius: 50px;
     margin:auto;
     text-align: center;
-    background-image: url(Bilder/ice-cream-5666480_1280.png);
+    background-image: url(../Bilder/ice-cream-5666480_1280.png);
 }
 h2{
     color: navy;
@@ -42,7 +42,7 @@ button{
 
 }
 body{
-    background-image: url(Bilder/background-1611576_1920.jpg);
+    background-image: url(../Bilder/background-1611576_1920.jpg);
     background-size: 2500px;
 }
 footer{

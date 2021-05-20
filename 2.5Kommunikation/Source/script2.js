@@ -1,6 +1,6 @@
 "use strict";
-var Aufgabe2_4;
-(function (Aufgabe2_4) {
+var Aufgabe2_5;
+(function (Aufgabe2_5) {
     function EisDiv(_auswahl, _index) {
         let div = document.createElement("div");
         div.classList.add("Eiskreation");
@@ -13,6 +13,7 @@ var Aufgabe2_4;
         let button = document.createElement("button");
         button.innerText = "auswählen";
         div.appendChild(button);
+        //hätte zusammengefasst werden können, indem man entwerder eine Funktion einfügt oder man mit einer for-Schleife durchgeht
         if ((document.querySelector("title").getAttribute("id") == "Seite1")) {
             button.addEventListener("click", auswahlWaffel); //Entschiedung, wann welche Funktion bzw. Seite aufgerufen wird
         }
@@ -23,23 +24,24 @@ var Aufgabe2_4;
             button.addEventListener("click", auswahlTopping); //Entschiedung, wann welche Funktion bzw. Seite aufgerufen wird
         }
         return div;
+        //hätte zusammengefasst werden können, indem man nue eine Funktion hat und hier Übergabeparameter verwendet
         function auswahlWaffel(_event) {
             console.log("Ihre Auswahl:");
             console.log("Name: " + _auswahl.name); //Auskunft noch als Überprüfung dringelassen 
             sessionStorage.setItem("image1", _auswahl.image);
-            location.href = "indexKugel.html"; //direktes weiterleiten zur nächsten Seite
+            location.href = "../HTML/indexKugel.html"; //direktes weiterleiten zur nächsten Seite
         }
         function auswahlKugel(_event) {
             console.log("Ihre Auswahl:");
             console.log("Name: " + _auswahl.name);
             sessionStorage.setItem("image2", _auswahl.image);
-            location.href = "indexTopping.html";
+            location.href = "../HTML/indexTopping.html";
         }
         function auswahlTopping(_event) {
             console.log("Ihre Auswahl:");
             console.log("Name: " + _auswahl.name);
             sessionStorage.setItem("image3", _auswahl.image);
-            location.href = "indexEisGesamt.html";
+            location.href = "../HTML/indexEisGesamt.html";
         }
     }
     //Aufgabe 1c) Aufrufen der verschiedenen Auswahhlen auf den verschiedenen Seiten
@@ -67,7 +69,7 @@ var Aufgabe2_4;
     //Aufgabe 1a): JSON Sting konvertieren
     let meinEis = konvertieren();
     function konvertieren() {
-        let eis = JSON.parse(Aufgabe2_4.eisJSON);
+        let eis = JSON.parse(Aufgabe2_5.eisJSON);
         return (eis);
     }
     auswahlAnzeigen(meinEis);
@@ -100,5 +102,5 @@ var Aufgabe2_4;
         auswahlImage3.src = sessionStorage.getItem("image3");
         bisherigeAuswahl.appendChild(auswahlImage3);
     }
-})(Aufgabe2_4 || (Aufgabe2_4 = {})); //Ende Namespace
+})(Aufgabe2_5 || (Aufgabe2_5 = {})); //Ende Namespace
 //# sourceMappingURL=script2.js.map

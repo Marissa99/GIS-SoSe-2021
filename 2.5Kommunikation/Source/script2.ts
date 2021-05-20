@@ -1,5 +1,5 @@
 
-namespace Aufgabe2_4 {
+namespace Aufgabe2_5 {
    
 
     function EisDiv (_auswahl: Eiskreation, _index: number): HTMLDivElement {
@@ -37,19 +37,19 @@ namespace Aufgabe2_4 {
         console.log("Ihre Auswahl:");
         console.log("Name: " + _auswahl.name); //Auskunft noch als Überprüfung dringelassen 
         sessionStorage.setItem("image1", _auswahl.image); 
-        location.href = "indexKugel.html"; //direktes weiterleiten zur nächsten Seite
+        location.href = "../HTML/indexKugel.html"; //direktes weiterleiten zur nächsten Seite
     }
     function auswahlKugel(_event: Event): void {
         console.log("Ihre Auswahl:");
         console.log("Name: " + _auswahl.name);
         sessionStorage.setItem("image2", _auswahl.image);
-        location.href = "indexTopping.html";
+        location.href = "../HTML/indexTopping.html";
     }
     function auswahlTopping(_event: Event): void {
         console.log("Ihre Auswahl:");
         console.log("Name: " + _auswahl.name); 
         sessionStorage.setItem("image3", _auswahl.image);  
-        location.href = "indexEisGesamt.html";
+        location.href = "../HTML/indexEisGesamt.html";
     }
 }
     

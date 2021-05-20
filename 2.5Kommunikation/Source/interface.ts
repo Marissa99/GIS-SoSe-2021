@@ -1,4 +1,4 @@
-namespace Aufgabe2_4 {
+namespace Aufgabe2_5 {
 
     //Aufgabe 2 a) 
     export interface Eiskreation { //interface welches die Auswahl beeinhaltet
