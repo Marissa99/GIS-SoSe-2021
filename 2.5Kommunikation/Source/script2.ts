@@ -79,14 +79,21 @@ namespace Aufgabe2_5 {
 
 //Aufgabe 1a): JSON Sting konvertieren
 
-    let meinEis: AlleAuswahlmoeglichkeiten = konvertieren();
+    let meinEis: AlleAuswahlmoeglichkeiten;
     
     function konvertieren (): AlleAuswahlmoeglichkeiten {
-        let eis: AlleAuswahlmoeglichkeiten = JSON.parse(eisJSON);
+        let eis: AlleAuswahlmoeglichkeiten = JSON.parse();
         return (eis);
     }
     auswahlAnzeigen(meinEis); 
+  //Aufgabe 2.5 b)
 
+    async function datenEinlesen(_url: AlleAuswahlmoeglichkeiten): Promise<void> {
+    let response: Response = await fetch(_url);
+    let jsonObj: string = await response.json();
+    meinEis = JSON.parse(JSON.stringify(jsonObj));
+    }
+    datenEinlesen("");
 
 //Aufgabe 1d):
     let bisherigeAuswahl: HTMLDivElement = <HTMLDivElement> document.getElementById ("bisherigeAuswahl");
@@ -118,6 +125,6 @@ namespace Aufgabe2_5 {
         auswahlImage3.src = sessionStorage.getItem("image3");
         bisherigeAuswahl.appendChild(auswahlImage3);
     }
-
-    
+  
+        
 }//Ende Namespace

@@ -67,12 +67,19 @@ var Aufgabe2_5;
         }
     }
     //Aufgabe 1a): JSON Sting konvertieren
-    let meinEis = konvertieren();
+    let meinEis;
     function konvertieren() {
-        let eis = JSON.parse(Aufgabe2_5.eisJSON);
+        let eis = JSON.parse();
         return (eis);
     }
     auswahlAnzeigen(meinEis);
+    //Aufgabe 2.5 b)
+    async function datenEinlesen(_url) {
+        let response = await fetch(_url);
+        let jsonObj = await response.json();
+        meinEis = JSON.parse(JSON.stringify(jsonObj));
+    }
+    datenEinlesen("");
     //Aufgabe 1d):
     let bisherigeAuswahl = document.getElementById("bisherigeAuswahl");
     bisherigeAuswahl.classList.add("auswahlBisher");
