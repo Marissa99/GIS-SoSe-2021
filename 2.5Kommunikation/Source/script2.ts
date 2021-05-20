@@ -1,7 +1,6 @@
 
 namespace Aufgabe2_5 {
    
-
     function EisDiv (_auswahl: Eiskreation, _index: number): HTMLDivElement {
     let div: HTMLDivElement = document.createElement("div");
     div.classList.add ("Eiskreation"); 
@@ -77,23 +76,16 @@ namespace Aufgabe2_5 {
     }
 }
 
-//Aufgabe 1a): JSON Sting konvertieren
+//Aufgabe 2.5 b)
 
-    let meinEis: AlleAuswahlmoeglichkeiten;
+    async function datenEinlesen(_url: RequestInfo): Promise<void> {
+        let antwort: Response = await fetch(_url); //warten bis die Seite geladen ist
+        console.log("Antwort: ", antwort); //Konsolenausgabe
+        let daten: AlleAuswahlmoeglichkeiten = await antwort.json();
+        auswahlAnzeigen(daten);
+    }
+    datenEinlesen("https://marissa99.github.io/GIS-SoSe-2021/2.5JSON/Source/data.json"); 
     
-    function konvertieren (): AlleAuswahlmoeglichkeiten {
-        let eis: AlleAuswahlmoeglichkeiten = JSON.parse();
-        return (eis);
-    }
-    auswahlAnzeigen(meinEis); 
-  //Aufgabe 2.5 b)
-
-    async function datenEinlesen(_url: AlleAuswahlmoeglichkeiten): Promise<void> {
-    let response: Response = await fetch(_url);
-    let jsonObj: string = await response.json();
-    meinEis = JSON.parse(JSON.stringify(jsonObj));
-    }
-    datenEinlesen("");
 
 //Aufgabe 1d):
     let bisherigeAuswahl: HTMLDivElement = <HTMLDivElement> document.getElementById ("bisherigeAuswahl");
@@ -124,7 +116,18 @@ namespace Aufgabe2_5 {
         let auswahlImage3: HTMLImageElement = document.createElement("img");
         auswahlImage3.src = sessionStorage.getItem("image3");
         bisherigeAuswahl.appendChild(auswahlImage3);
+    
+     //Aufgagabe 2.5 c) übergibt die Daten an die URL und erhält die Antwort
+        async function datenSchicken(_url: RequestInfo): Promise <void> {
+            let query: URLSearchParams = new URLSearchParams (sessionStorage);
+            _url = _url + "?" + query.toString();
+            let antwort: Response = await fetch(_url);
+            let ausgabe: string = await antwort.text();
+            let rueckgabe: HTMLParagraphElement = <HTMLDivElement> document.getElementById ("server"); //anheften an die Seite
+            rueckgabe.innerText = ausgabe;  
+      
+        }
+        datenSchicken("https://gis-communication.herokuapp.com");
     }
-  
         
 }//Ende Namespace

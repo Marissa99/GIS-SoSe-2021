@@ -66,20 +66,14 @@ var Aufgabe2_5;
             }
         }
     }
-    //Aufgabe 1a): JSON Sting konvertieren
-    let meinEis;
-    function konvertieren() {
-        let eis = JSON.parse();
-        return (eis);
-    }
-    auswahlAnzeigen(meinEis);
     //Aufgabe 2.5 b)
     async function datenEinlesen(_url) {
-        let response = await fetch(_url);
-        let jsonObj = await response.json();
-        meinEis = JSON.parse(JSON.stringify(jsonObj));
+        let antwort = await fetch(_url); //warten bis die Seite geladen ist
+        console.log("Antwort: ", antwort); //Konsolenausgabe
+        let daten = await antwort.json();
+        auswahlAnzeigen(daten);
     }
-    datenEinlesen("");
+    datenEinlesen("https://marissa99.github.io/GIS-SoSe-2021/2.5JSON/Source/data.json");
     //Aufgabe 1d):
     let bisherigeAuswahl = document.getElementById("bisherigeAuswahl");
     bisherigeAuswahl.classList.add("auswahlBisher");
@@ -108,6 +102,16 @@ var Aufgabe2_5;
         let auswahlImage3 = document.createElement("img");
         auswahlImage3.src = sessionStorage.getItem("image3");
         bisherigeAuswahl.appendChild(auswahlImage3);
+        //Aufgagabe 2.5 c) übergibt die Daten an die URL und erhält die Antwort
+        async function datenSchicken(_url) {
+            let query = new URLSearchParams(sessionStorage);
+            _url = _url + "?" + query.toString();
+            let antwort = await fetch(_url);
+            let ausgabe = await antwort.text();
+            let rueckgabe = document.getElementById("server"); //anheften an die Seite
+            rueckgabe.innerText = ausgabe;
+        }
+        datenSchicken("https://gis-communication.herokuapp.com");
     }
 })(Aufgabe2_5 || (Aufgabe2_5 = {})); //Ende Namespace
 //# sourceMappingURL=script2.js.map
