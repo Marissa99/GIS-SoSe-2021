@@ -1,4 +1,3 @@
-
 namespace Aufgabe2_5 {
    
     function EisDiv (_auswahl: Eiskreation, _index: number): HTMLDivElement {
