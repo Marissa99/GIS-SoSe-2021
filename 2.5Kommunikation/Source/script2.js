@@ -69,11 +69,11 @@ var Aufgabe2_5;
     //Aufgabe 2.5 b)
     async function datenEinlesen(_url) {
         let antwort = await fetch(_url); //warten bis die Seite geladen ist
-        console.log("Antwort: ", antwort); //Konsolenausgabe
+        //console.log("Antwort: ", antwort); //Konsolenausgabe
         let daten = await antwort.json();
         auswahlAnzeigen(daten);
     }
-    datenEinlesen("https://marissa99.github.io/GIS-SoSe-2021/2.5JSON/Source/data.json");
+    datenEinlesen("https://marissa99.github.io/GIS-SoSe-2021/2.5Kommunikation/Source/data.json");
     //Aufgabe 1d):
     let bisherigeAuswahl = document.getElementById("bisherigeAuswahl");
     bisherigeAuswahl.classList.add("auswahlBisher");
@@ -105,8 +105,10 @@ var Aufgabe2_5;
         //Aufgagabe 2.5 c) übergibt die Daten an die URL und erhält die Antwort
         async function datenSchicken(_url) {
             let query = new URLSearchParams(sessionStorage);
-            _url = _url + "?" + query.toString();
+            console.log(query.toString());
+            _url = _url + "?" + query.toString(); //Session Storrage in URL
             let antwort = await fetch(_url);
+            console.log(antwort);
             let ausgabe = await antwort.text();
             let rueckgabe = document.getElementById("server"); //anheften an die Seite
             rueckgabe.innerText = ausgabe;

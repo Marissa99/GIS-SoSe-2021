@@ -79,11 +79,11 @@ namespace Aufgabe2_5 {
 
     async function datenEinlesen(_url: RequestInfo): Promise<void> {
         let antwort: Response = await fetch(_url); //warten bis die Seite geladen ist
-        console.log("Antwort: ", antwort); //Konsolenausgabe
+        //console.log("Antwort: ", antwort); //Konsolenausgabe
         let daten: AlleAuswahlmoeglichkeiten = await antwort.json();
         auswahlAnzeigen(daten);
     }
-    datenEinlesen("https://marissa99.github.io/GIS-SoSe-2021/2.5JSON/Source/data.json"); 
+    datenEinlesen("https://marissa99.github.io/GIS-SoSe-2021/2.5Kommunikation/Source/data.json"); 
     
 
 //Aufgabe 1d):
@@ -119,12 +119,13 @@ namespace Aufgabe2_5 {
      //Aufgagabe 2.5 c) übergibt die Daten an die URL und erhält die Antwort
         async function datenSchicken(_url: RequestInfo): Promise <void> {
             let query: URLSearchParams = new URLSearchParams (sessionStorage);
-            _url = _url + "?" + query.toString();
+            console.log(query.toString());
+            _url = _url + "?" + query.toString(); //Session Storrage in URL
             let antwort: Response = await fetch(_url);
+            console.log(antwort);
             let ausgabe: string = await antwort.text();
             let rueckgabe: HTMLParagraphElement = <HTMLDivElement> document.getElementById ("server"); //anheften an die Seite
             rueckgabe.innerText = ausgabe;  
-      
         }
         datenSchicken("https://gis-communication.herokuapp.com");
     }
