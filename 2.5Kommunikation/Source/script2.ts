@@ -79,7 +79,7 @@ namespace Aufgabe2_5 {
 
     async function datenEinlesen(_url: RequestInfo): Promise<void> {
         let antwort: Response = await fetch(_url); //warten bis die Seite geladen ist
-        //console.log("Antwort: ", antwort); //Konsolenausgabe
+        console.log("Antwort: ", antwort); //Konsolenausgabe
         let daten: AlleAuswahlmoeglichkeiten = await antwort.json();
         auswahlAnzeigen(daten);
     }

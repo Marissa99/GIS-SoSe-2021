@@ -69,7 +69,7 @@ var Aufgabe2_5;
     //Aufgabe 2.5 b)
     async function datenEinlesen(_url) {
         let antwort = await fetch(_url); //warten bis die Seite geladen ist
-        //console.log("Antwort: ", antwort); //Konsolenausgabe
+        console.log("Antwort: ", antwort); //Konsolenausgabe
         let daten = await antwort.json();
         auswahlAnzeigen(daten);
     }
