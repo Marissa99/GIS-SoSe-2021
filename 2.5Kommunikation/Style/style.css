@@ -56,3 +56,9 @@ p{
     font-size: large;
     color: navy;
 }
+.Error{
+    color: red;
+}
+.Message{
+    color: green;
+}

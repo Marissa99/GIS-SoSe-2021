@@ -109,9 +109,16 @@ var Aufgabe2_5;
             _url = _url + "?" + query.toString(); //Session Storrage in URL
             let antwort = await fetch(_url);
             console.log(antwort);
-            let ausgabe = await antwort.text();
+            let ausgabe = await antwort.json(); //json Objekt was reinkommt soll wie das Interface aufgebaut werden
             let rueckgabe = document.getElementById("server"); //anheften an die Seite
-            rueckgabe.innerText = ausgabe;
+            if (ausgabe.error) {
+                rueckgabe.className = "Error";
+                rueckgabe.innerText = ausgabe.error; //ruf die message innerhalb des errors auf
+            }
+            else {
+                rueckgabe.className = "Message";
+                rueckgabe.innerText = ausgabe.message;
+            }
         }
         datenSchicken("https://gis-communication.herokuapp.com");
     }
