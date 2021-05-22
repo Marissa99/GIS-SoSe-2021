@@ -142,5 +142,4 @@ namespace Aufgabe2_5 {
         [key: string]: string; //bekommt aufjedenfall ein string
     }
     
-        
 }//Ende Namespace
