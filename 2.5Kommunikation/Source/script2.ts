@@ -1,4 +1,4 @@
-namespace Aufgabe2_5 {
+ namespace Aufgabe2_5 {
    
     function EisDiv (_auswahl: Eiskreation, _index: number): HTMLDivElement {
     let div: HTMLDivElement = document.createElement("div");
