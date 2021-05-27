@@ -5,24 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
-    <script src="index.js" defer></script>
+    <script src="client/script.js" defer></script>
     <title>Kontaktdaten</title>
 </head>
 <body>
-    <form>  
-
+    <form method="get" action="https://gis-example.herokuapp.com">  
+        
         <h1>Kontaktdaten</h1>
+        <h2>Teilaufgabe 1</h2>
 
-        <label for="vname">Vorname:</label> <br>
-        <input type="text" name="vname" id="vname"><br>
+        <label for="vorname">Vorname:</label> <br>
+        <input type="text" name="vorname" id="vorname"><br>
 
-        <label for="nname">Nachname:</label> <br>
-        <input type="text" name="nname" id="nname"><br>
+        <label for="nachname">Nachname:</label> <br>
+        <input type="text" name="nachname" id="nachname"><br>
 
         <label for="adresse">Adresse:</label> <br>
         <input type="text" name="adresse" id="adresse"><br>
 
         <button type="button" id="button">Absenden</button>
+
+        <p> Ihre Eingaben</p>
+        <p id = "serverausgabe"></p>
 
     </form>
     
