@@ -1,0 +1,21 @@
+{
+  "name": "gis-sose-2021",
+  "version": "1.0.0",
+  "description": "Herzlich Willkommen",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marissa99/GIS-SoSe-2021.git"
+  },
+  "author": "Marissa Reiser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marissa99/GIS-SoSe-2021/issues"
+  },
+  "homepage": "https://github.com/Marissa99/GIS-SoSe-2021#readme"
+}
