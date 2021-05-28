@@ -8,7 +8,7 @@ var P_3_1Server;
         for (let entry of formData) {
             console.log(entry);
             console.log("name: " + entry[0]); //Ausgabe
-            console.log("name: " + entry[0]); //Ausgabe
+            console.log("name: " + entry[1]); //Ausgabe
         }
         let query = new URLSearchParams(formData);
         let _url = "https://gissose2021mr.herokuapp.com/";
@@ -17,8 +17,8 @@ var P_3_1Server;
         let response = await fetch(_url); // auf url warten
         let antwort = await response.text();
         console.log(antwort);
-        let rueckgabe = document.getElementById("serverausgabe");
-        rueckgabe.innerText = antwort;
+        //let rueckgabe: HTMLParagraphElement = <HTMLParagraphElement> document.getElementById("serverausgabe");
+        //rueckgabe.innerText = antwort;
     }
     let button = document.getElementById("button");
     button.addEventListener("click", sendData);

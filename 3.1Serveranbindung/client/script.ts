@@ -6,7 +6,7 @@ namespace P_3_1Server {
         for (let entry of formData) {
             console.log(entry);
             console.log("name: " + entry[0]); //Ausgabe
-            console.log("name: " + entry[0]); //Ausgabe
+            console.log("name: " + entry[1]); //Ausgabe
         }
         let  query: URLSearchParams = new URLSearchParams(<any> formData);
         let _url: RequestInfo = "https://gissose2021mr.herokuapp.com/";
@@ -15,8 +15,8 @@ namespace P_3_1Server {
         let response: Response = await fetch (_url); // auf url warten
         let antwort: string = await response.text();
         console.log (antwort); 
-        let rueckgabe: HTMLParagraphElement = <HTMLParagraphElement> document.getElementById("serverausgabe");
-        rueckgabe.innerText = antwort;
+        //let rueckgabe: HTMLParagraphElement = <HTMLParagraphElement> document.getElementById("serverausgabe");
+        //rueckgabe.innerText = antwort;
     }
     let button: HTMLButtonElement = <HTMLButtonElement> document.getElementById("button");
     button.addEventListener("click", sendData);
