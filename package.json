@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "start": "node 3.1Serveranbindung/client/script.js" 
+    "start": "node 3.1Serveranbindung/server/server.js" 
   },
   "repository": {
     "type": "git",

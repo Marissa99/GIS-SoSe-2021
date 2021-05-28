@@ -4,14 +4,14 @@ var P_3_1Server;
     //Teilaufgabe 2
     async function sendData() {
         let formData = new FormData(document.forms[0]);
-        console.log(":" + formData.get("name"));
+        console.log(":" + formData.get("name")); //Ausgabe
         for (let entry of formData) {
             console.log(entry);
-            console.log("name: " + entry[0]);
-            console.log("name: " + entry[0]);
+            console.log("name: " + entry[0]); //Ausgabe
+            console.log("name: " + entry[0]); //Ausgabe
         }
         let query = new URLSearchParams(formData);
-        let _url = "https://gissose-2021mr.herokuapp.com";
+        let _url = "https://gissose2021mr.herokuapp.com/";
         _url = _url + "?" + query.toString();
         console.log(_url);
         let response = await fetch(_url); // auf url warten
