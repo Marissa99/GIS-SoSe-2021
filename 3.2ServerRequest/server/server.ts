@@ -39,8 +39,8 @@ export namespace P_3_2ServerRequest {
                 }
             } 
        }
-       
         _response.end(); //Antwort fertig und zurückgeschickt -->beendet
+        
     } //Ende Funktion handleRequest
 } //Ende namespace
 

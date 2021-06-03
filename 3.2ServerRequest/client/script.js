@@ -1,26 +1,34 @@
 "use strict";
 var P_3_2ServerRequest;
 (function (P_3_2ServerRequest) {
-    //Teilaufgabe 2
-    async function sendData() {
-        let formData = new FormData(document.forms[0]);
-        console.log(":" + formData.get("name")); //Konsolenausgabe
-        for (let entry of formData) {
-            console.log(entry);
-            console.log("name: " + entry[0]); ///Konsolenausgabe Eingang Stelle 0
-            console.log("name: " + entry[1]); //Konsolenausgabe
-        }
+    let jsonButton = document.getElementById("JSONButton");
+    jsonButton.addEventListener("click", sendDataHTML); //Eventlistener für JSON Button, aufrufen der Funktion
+    let htmlButton = document.getElementById("HTMLButton");
+    htmlButton.addEventListener("click", sendDataJSON); //Eventlistener für HTMl Button, aufrufen der Funktion
+    let rueckgabe = document.getElementById("serverausgabe"); //Paragraph und id um die Eingaben auf der HTML Site anzeigen zu lassen
+    async function sendDataHTML() {
+        let formData = new FormData(document.forms[0]); //generiert FormData Ohjekt aus <form> in das Dokument
+        let url = "https://gissose2021mr.herokuapp.com/"; //Verknüpfung mit der herokuapp
+        url += "/html";
         let query = new URLSearchParams(formData);
-        let _url = "https://gissose2021mr.herokuapp.com/"; //Verknüpfung mit der herokuapp
-        _url = _url + "?" + query.toString(); //Url in String umwandeln
-        console.log(_url); //Konsolenausgabe
-        let response = await fetch(_url); // auf url warten
-        let antwort = await response.text(); //Auf die antwort warten
-        console.log(antwort);
-        let rueckgabe = document.getElementById("serverausgabe"); //Paragraph und id um die Eingaben auf der HTML Site anzeigen zu lassen
-        rueckgabe.innerText = antwort;
+        url = url + "?" + query.toString(); //Url in String umwandeln
+        let response = await fetch(url); // auf url warten
+        let responseText = await response.text(); //
+        rueckgabe.innerText = responseText;
     }
-    let button = document.getElementById("button");
-    button.addEventListener("click", sendData); //Button um Funktion aufzurufen
+    async function sendDataJSON() {
+        let formData = new FormData(document.forms[0]); //generiert FormData Ohjekt aus <form> in das Dokument
+        let url = "https://gissose2021mr.herokuapp.com/"; //Verknüpfung mit der herokuapp
+        url += "/json";
+        let query = new URLSearchParams(formData);
+        url = url + "?" + query.toString(); //Url in String umwandeln
+        let response = await fetch(url); // auf url warten
+        let responseText = await response.text(); // auf textausgabe warten
+        console.log(responseText); //Ausgabe json string
+        let responseJson = JSON.parse(responseText); //JSOn parsen
+        console.log(responseJson); // Ausgabe JSON
+        rueckgabe.innerHTML = responseText;
+        console.log(rueckgabe);
+    }
 })(P_3_2ServerRequest || (P_3_2ServerRequest = {})); //Ende namespace
 //# sourceMappingURL=script.js.map
