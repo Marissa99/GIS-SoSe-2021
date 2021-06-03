@@ -1,4 +1,4 @@
-namespace P_3_1Server {
+namespace P_3_2ServerRequest {
     //Teilaufgabe 2
     async function sendData(): Promise<void> { //async Funktion
         let formData: FormData = new FormData (document.forms[0]);

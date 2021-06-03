@@ -1,6 +1,6 @@
 "use strict";
-var P_3_1Server;
-(function (P_3_1Server) {
+var P_3_2ServerRequest;
+(function (P_3_2ServerRequest) {
     //Teilaufgabe 2
     async function sendData() {
         let formData = new FormData(document.forms[0]);
@@ -22,5 +22,5 @@ var P_3_1Server;
     }
     let button = document.getElementById("button");
     button.addEventListener("click", sendData); //Button um Funktion aufzurufen
-})(P_3_1Server || (P_3_1Server = {})); //Ende namespace
+})(P_3_2ServerRequest || (P_3_2ServerRequest = {})); //Ende namespace
 //# sourceMappingURL=script.js.map
