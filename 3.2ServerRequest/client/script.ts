@@ -30,9 +30,7 @@ namespace P_3_2ServerRequest {
         console.log(objektJson); //Ausgabe json string
        
 
-        rueckgabe.innerHTML = objektJson.vorname; // Ausgabe Vorname zur Überprüfung
-        rueckgabe.innerHTML = objektJson.nachname; 
-        rueckgabe.innerHTML = objektJson.adresse; 
+        rueckgabe.innerHTML = objektJson.vorname; // Ausgabe Vorname auf HTML Seite zur Überprüfung
         console.log(rueckgabe);
     }
 
