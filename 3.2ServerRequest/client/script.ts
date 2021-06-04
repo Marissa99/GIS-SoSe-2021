@@ -12,6 +12,8 @@ namespace P_3_2ServerRequest {
         let url: RequestInfo = "https://gissose2021mr.herokuapp.com"; //Verknüpfung mit der herokuapp
         //let url: RequestInfo = "http://localhost:8100"; um es lokas zu testen
         url += "/html"; // Anhängen mit einem / daher oben keiner notwenig
+        //-->any motzt nicht mehr
+        //tslint:disable-next-line 
         let  query: URLSearchParams = new URLSearchParams(<any> formData);
         url = url + "?" + query.toString(); //Url in String umwandeln
         let response: Response = await fetch (url); // auf url warten
@@ -23,6 +25,8 @@ namespace P_3_2ServerRequest {
         let url: RequestInfo = "https://gissose2021mr.herokuapp.com"; //Verknüpfung mit der herokuapp
         //let url: RequestInfo = "http://localhost:8100"; um es lokas zu testen
         url += "/json";
+         //-->any motzt nicht mehr
+        //tslint:disable-next-line 
         let  query: URLSearchParams = new URLSearchParams(<any> formData);
         url = url + "?" + query.toString(); //Url in String umwandeln
         let response: Response = await fetch (url); // auf url warten

@@ -3,13 +3,24 @@ html{
 
 }
 #JSONButton{
-margin-top: 20px;
+    margin-top: 10px;
+    background-color: teal;
+    opacity: 70%;
 }
 
 #HTMLButton{
-    margin-top: 20px;
+    margin-top: 10px;
+    background-color: teal;
+    opacity: 70%;
+   
 }
 
-#button{
-    margin-right: 50px;
+
+label{
+    color: teal;
+    
+}
+
+p{
+    margin-top: 50px;
 }
