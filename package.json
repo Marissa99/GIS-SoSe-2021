@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "Herzlich Willkommen",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@types/mongodb": "^3.6.18",
+    "mongodb": "^3.6.9"
+  },
   "devDependencies": {},
   "scripts": {
-    "start": "node 3.2ServerRequest/server/server.js" 
+    "start": "node 3.4Datenbank/server.js"
   },
   "repository": {
     "type": "git",

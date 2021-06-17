@@ -2,13 +2,13 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 
 }
-#datenVerschicken{
+#JSONButton{
     margin-top: 10px;
     background-color: teal;
     opacity: 70%;
 }
 
-#datenAusgabe{
+#HTMLButton{
     margin-top: 10px;
     background-color: teal;
     opacity: 70%;

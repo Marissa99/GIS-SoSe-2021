@@ -32,7 +32,7 @@ var P_3_2ServerRequest;
             }
             else if (pathname == "/html") { //wenn /html in der url empfangen wird 
                 for (let key in url.query) { //dann Ausgabe der Schlüssel-Wert-Paare
-                    _response.write(key + ":" + url.query[key] + "<br/>"); // !!! br noch durch eine Liste ersetzen
+                    _response.write(key + ":" + url.query[key] + "<br/>"); // !!! "br" versucht in eine Liste zu ersezten, aber da es dann nur Codedoppelung war , "br" gelassen              
                 }
             }
         }

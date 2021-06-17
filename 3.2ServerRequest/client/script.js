@@ -11,6 +11,8 @@ var P_3_2ServerRequest;
         let url = "https://gissose2021mr.herokuapp.com"; //Verknüpfung mit der herokuapp
         //let url: RequestInfo = "http://localhost:8100"; um es lokas zu testen
         url += "/html"; // Anhängen mit einem / daher oben keiner notwenig
+        //-->any motzt nicht mehr
+        //tslint:disable-next-line 
         let query = new URLSearchParams(formData);
         url = url + "?" + query.toString(); //Url in String umwandeln
         let response = await fetch(url); // auf url warten
@@ -22,12 +24,14 @@ var P_3_2ServerRequest;
         let url = "https://gissose2021mr.herokuapp.com"; //Verknüpfung mit der herokuapp
         //let url: RequestInfo = "http://localhost:8100"; um es lokas zu testen
         url += "/json";
+        //-->any motzt nicht mehr
+        //tslint:disable-next-line 
         let query = new URLSearchParams(formData);
         url = url + "?" + query.toString(); //Url in String umwandeln
         let response = await fetch(url); // auf url warten
         let objektJson = await response.json(); // neues Objekt von Interface Ausgabe
         console.log(objektJson); //Ausgabe json string
-        rueckgabe.innerHTML = objektJson.vorname; // Ausgabe Vorname zur Überprüfung
+        rueckgabe.innerHTML = objektJson.vorname; // Ausgabe Vorname auf HTML Seite zur Überprüfung
         console.log(rueckgabe);
     }
 })(P_3_2ServerRequest || (P_3_2ServerRequest = {})); //Ende namespace

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+    <script src="client/script.js" defer></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <form>  
+        
+        <h1>Semesterbewertung</h1>
+        
+        <label for="vorname">Vorname:</label><br>
+        <input type="text" name="vorname" id="vorname"><br>
+
+        <label for="nachname">Nachname:</label> <br>
+        <input type="text" name="nachname" id="nachname"><br>
+
+        <p> Ihre Feedback zum letzten Semester:</p>
+
+        <label for="feedbackSuper"> Sehr gut:</label><input type="radio" name="radio" id="radio"> <br>
+        
+        <label for="feedbackMittel"> Mittelmäßig:</label> <input type="radio" name="radio" id="radio"><br>
+       
+        <label for="feedbackSchlecht"> Schlecht:</label><input type="radio" name="radio" id="radio"><br>
+     
+        <p>Hier können Sie weiteres Feedback zum Semester abgeben</p>
+        <input type="text" name="feedback" id="feedback"><br>
+
+        
+        <p id="zusatz">Mit Absenden der Nachricht bestätige ich den <em>Datenschutz</em><input class="Kontakt" type="checkbox" name="Box" placeholder="Box"></p>
+
+
+        <button id = "datenVerschicken" type="button" id="Daten verschicken">Abschicken</button> 
+        <button id = "datenAusgabe" type="button" id="Daten Ausgabe">Ausgabe</button>
+
+        <p> Ihre Angaben</p>
+        <div id="ausgaben"></div>
+
+    
+</body>
+</html>
