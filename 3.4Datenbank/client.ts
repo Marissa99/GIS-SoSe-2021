@@ -25,6 +25,7 @@ namespace Aufgabe3_4 {
     let rueckgabe: HTMLDivElement = <HTMLDivElement> document.getElementById("ausgaben"); //anheften an die Seite
 
     //Funktion um Daten auf der Seite anzuzeigen
+    
     async function datenAnzeigen(): Promise <void> { 
         let formData: FormData = new FormData (document.forms[0]);
         let url: RequestInfo = "https://gissose2021mr.herokuapp.com";
