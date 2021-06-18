@@ -22,6 +22,7 @@ function startServer (_port: number | string): void {
 
 }
 
+
 async function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): Promise <void> { 
     console.log("Daten angekommen"); //Überprüfung ob Daten angekommen sind
     _response.setHeader("content-type", "text/html; charset=utf-8"); //Eigenschaften von HTML
