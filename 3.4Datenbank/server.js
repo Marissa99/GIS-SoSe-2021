@@ -6,25 +6,18 @@ const Url = require("url");
 const Mongo = require("mongodb");
 var Aufgabe3_4;
 (function (Aufgabe3_4) {
-    let urlDBlokal = "mongodb: //localhost:27017"; //um es lokal testen zu können
-    //let urlDB: string = "mongodb+srv://Testuser2:<password>@marissareiser-gis21.8i9as.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-    let port = Number(process.env.PORT); //dem Port die Number "Hafen" geben
+    //let urlDBlokal: string = "mongodb://localhost:27017"; //um es lokal testen zu können
+    let urlDB = "mongodb+srv://Testuser2:<password>@marissareiser-gis21.8i9as.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+    let port = Number(process.env.PORT); //dem Port die Nummer "Hafen" geben
     if (!port)
         port = 8100;
     startServer(port); //Server auf dem Port starten
-    //connectDatabase(urlDB); //Verbindung mit der Datenbank
     function startServer(_port) {
         let server = Http.createServer(); //erstellt Server
         console.log("Server gestartet");
         server.listen(_port);
         server.addListener("request", handleRequest);
     }
-    /*async function connectDatabase(_url: string): Promise<void> { //Übergabe Parameter url , Verbindung mit MongoDB
-        let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true};
-        let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
-        await mongoClient.connect();
-        let feedback: Mongo.Collection = mongoClient.db("3_4Abgabe").collection("Feedback");
-    }*/
     async function handleRequest(_request, _response) {
         console.log("Daten angekommen"); //Überprüfung ob Daten angekommen sind
         _response.setHeader("content-type", "text/html; charset=utf-8"); //Eigenschaften von HTML
@@ -34,11 +27,12 @@ var Aufgabe3_4;
             let pathname = url.pathname; //pathname in string speichern
             let eingabe = { vorname: url.query.vorname + "", nachname: url.query.nachname + "", feedback: url.query.feedback + "" };
             if (pathname == "/datenVerschicken") { //wenn ein man Daten verschicken möchte
-                let daten = await abspeichern(urlDBlokal, eingabe); //Funktion abspeichern aufrufen
+                let daten = await abspeichern(urlDB, eingabe); //Funktion abspeichern aufrufen
                 _response.write(daten); //Antwort zurückgeben
             }
             else if (pathname == "/datenAusgabe") {
-                let antwort = await dbAuslesen(urlDBlokal);
+                let antwort = await dbAuslesen(urlDB);
+                console.log(antwort);
                 _response.write(JSON.stringify(antwort)); //wenn Daten abgeschickt sind und in DB speichern
             }
         }
@@ -49,8 +43,8 @@ var Aufgabe3_4;
         let mongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
         let infos = mongoClient.db("3_4Abgabe").collection("Feedback"); //eigene neue Collection aufrufen
-        infos.insertOne(_eingabe); //eingegebene Daten in DB spreichern
-        let antwort = "Eingespreichert";
+        infos.insertOne(_eingabe); //eingegebene Daten in DB speichern
+        let antwort = "Eingespeichert";
         return antwort;
     }
     async function dbAuslesen(_url) {

@@ -6,8 +6,8 @@ var Aufgabe3_4;
     //Daten abschicken um in MongoDB zu speichern
     async function datenAbschicken() {
         let formData = new FormData(document.forms[0]); //generiert FormData Ohjekt aus <form> in das Dokument
-        //let url: RequestInfo = "https://gissose2021mr.herokuapp.com"; //Verknüpfung mit der herokuapp
-        let url = "http://localhost:27017"; //um es lokas zu testen
+        let url = "https://gissose2021mr.herokuapp.com"; //Verknüpfung mit der herokuapp
+        //let url: RequestInfo = "http://localhost:8100"; //um es lokas zu testen
         url += "/datenVerschicken"; // Anhängen mit einem / daher oben keiner notwenig
         //--> motzt wegen any nicht mehr
         //tslint:disable-next-line 
@@ -19,13 +19,13 @@ var Aufgabe3_4;
     }
     let buttonAusgabe = document.getElementById("datenAusgabe");
     buttonAusgabe.addEventListener("click", datenAnzeigen);
-    let rueckgabe = document.getElementById("datenVerschicken"); //anheften an die Seite
+    let rueckgabe = document.getElementById("ausgaben"); //anheften an die Seite
     //Funktion um Daten auf der Seite anzuzeigen
     async function datenAnzeigen() {
         let formData = new FormData(document.forms[0]);
-        // let url: RequestInfo = "https://gissose2021mr.herokuapp.com";
-        let url = "http://localhost:27017"; //um es lokas zu testen
-        url += "/datenAusgabe"; //BUtton um es auf der Seite anzueigen zu lassen
+        let url = "https://gissose2021mr.herokuapp.com";
+        //let url: RequestInfo = "http://localhost:8100"; //um es lokas zu testen
+        url += "/datenAusgabe"; //Button um es auf der Seite anzueigen zu lassen
         //-->any motzt nicht mehr
         //tslint:disable-next-line 
         let query = new URLSearchParams(formData);
@@ -34,6 +34,5 @@ var Aufgabe3_4;
         let ausgabe = await antwort.text();
         rueckgabe.innerHTML = ausgabe; //Ausgabe auf der HTML Seite 
     }
-    //Funktion um Daten zu Löschen
 })(Aufgabe3_4 || (Aufgabe3_4 = {}));
 //# sourceMappingURL=client.js.map
